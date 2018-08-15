@@ -1,0 +1,113 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1 align="center">Pipeline PSI Calculations</h1>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+<div class="input-group">
+<%= search_form_for @search do |f| %>
+<%= f.label "Quick Search" %>
+    <th> <%= f.search_field :sample_id_eq, :Placeholder => ' Search For a Sample', class: 'form-control' %><th>
+    <th><%= f.search_field :gene_eq, :Placeholder => ' ENSEMBL Gene',class: 'form-control' %><th>
+    <th><span class="input-group-btn">
+<%= f.submit "Search", :class => 'btn btn-primary' %> 
+</span> </th>
+<%end%>
+</table>
+<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#pie">Visualize</button>
+<div id="pie" class="collapse"> 
+
+
+<th><center><td> <%= pie_chart @spr.group(:transcript).sum(:psi),chart: {
+        type: 'heatmap'}, library: { chart: {zoomType: 'x'}},width: "1000px",height: "700px",title: "PSI division for this Gene" %><</td></center><td></thead>
+
+</div>
+</div>
+<table class="table table-hover">
+  <thead class="thead-dark">
+ <tr>
+    <th> <%= sort_link @search, :sample_id,"TCGA_ID" %> </th>
+  <th>  <%= sort_link @search, :gene,"ENSEMBL Gene" %> </th>
+  <th>  <%= sort_link @search,:transcript, "ENSEMBL Transcript" %> </th>
+  <th> <%= sort_link @search,:PSI, "PSI" %> </th>
+  </thead>
+</tr>
+    <%= will_paginate @spr%>
+    <% @spr.each do |transplice| %>
+    <% if transplice.flag == true %>
+<tr  style="background-color:SpringGreen" >
+  <% else %>
+ <tr > 
+  <% end %>
+  <td><button type="button" class="btn btn-link" data-toggle="modal" data-target="#<%=transplice.sample_id%>" data-whatever="<%= transplice.sample_id%>"> <%=transplice.sample_id%>  </button> 
+  
+
+<!-- Modal -->
+<div class="modal fade" id="<%=transplice.sample_id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Information for sample <%=transplice.sample_id%> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <form>
+      <div class="form-group">
+            <label  class="col-form-label">Gender:</label>
+            <label  class="col-form-label"><%= transplice.sample.gender %></label>
+          </div>
+       <div class="form-group">
+            <label  class="col-form-label">Race:</label>
+            <label  class="col-form-label"><%= transplice.sample.race %> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Status:</label>
+            <label  class="col-form-label"><%= transplice.sample.vital_status %> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Cancer Stage:</label>
+            <label  class="col-form-label"><%= transplice.sample.ajcc_pathologic_tumor_stage%> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Location Of Tumor:</label>
+            <label  class="col-form-label"><%= transplice.sample.anatomic_neoplasm_subdivision%>  </label>
+          </div>
+          <div class="form-group">
+            <label  class="col-form-label">Notes for this Record:</label>
+            <% if  transplice.notes.nil? %>
+            <label  class="col-form-label">There are no notes for this record</label>
+            <% else %>
+            <label  class="col-form-label"><%= transplice.notes%>  </label>
+            <% end %>
+          </div>
+           <div class="form-group">
+            <label  class="col-form-label">Flagged as Important?</label>
+            <label  class="col-form-label"><%=transplice.flag %> </label>
+          </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="window.open('/samples/<%=transplice.sample_id%>','_blank', 'height=600, width=600')">More Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <td><%= link_to transplice.gene, transplice, :onclick=> "window.open(this.href,'create_company', 'height=600, width=600');return false;"  %></td>
+        <td><%= transplice.transcript %></td>
+        <td><%= transplice.psi %></td>
+        <td><% link_to 'Show', transplice %></td>
+        <td><% link_to 'Edit', edit_transplice_path(transplice) %></td>
+        <td><% link_to 'Destroy', transplice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transplice', new_transplice_path %>

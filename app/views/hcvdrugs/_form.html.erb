@@ -1,0 +1,14 @@
+<%= simple_form_for(@hcvdrug) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :region %>
+    <%= f.input :variant %>
+    <%= f.input :information %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

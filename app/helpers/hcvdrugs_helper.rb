@@ -1,0 +1,2 @@
+module HcvdrugsHelper
+end

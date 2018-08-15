@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hcvdrug.name %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @hcvdrug.region %>
+</p>
+
+<p>
+  <strong>Variant:</strong>
+  <%= @hcvdrug.variant %>
+</p>
+
+<p>
+  <strong>Information:</strong>
+  <%= @hcvdrug.information %>
+</p>
+<%= link_to 'Edit', edit_hcvdrug_path(@hcvdrug) %> |
+<%= link_to 'Back', hcvdrugs_path %>

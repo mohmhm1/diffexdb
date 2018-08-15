@@ -1,0 +1,2 @@
+class Ns5ADescriptionController < ApplicationController
+end

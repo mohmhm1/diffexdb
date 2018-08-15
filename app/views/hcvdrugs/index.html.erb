@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hcvdrugs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Region</th>
+      <th>Variant</th>
+      <th>Information</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hcvdrugs.each do |hcvdrug| %>
+      <tr>
+        <td><%= hcvdrug.name %></td>
+        <td><%= hcvdrug.region %></td>
+        <td><%= hcvdrug.variant %></td>
+        <td><%= hcvdrug.information %></td>
+        <td><%= link_to 'Show', hcvdrug %></td>
+        <td><%= link_to 'Edit', edit_hcvdrug_path(hcvdrug) %></td>
+        <td><%= link_to 'Destroy', hcvdrug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hcvdrug', new_hcvdrug_path %>

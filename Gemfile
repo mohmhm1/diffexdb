@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.0'
  gem 'elasticsearch-model'
  gem 'elasticsearch-rails'
  gem 'loading_screen', '~> 0.2.3'
+
 group :development, :test do
   gem 'byebug'
 end
@@ -33,6 +34,8 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'simple_form'
 group :development do
+  
+
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'rails_layout'
@@ -44,7 +47,6 @@ group :development, :test do
 end
 group :production do
   gem 'pg', '~> 0.15'
-  gem 'puma'
   gem 'rails_12factor'
 end
 gem 'devise'

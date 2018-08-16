@@ -27,7 +27,7 @@ production:
   host: localhost
   adapter: postgresql
   encoding: utf8
-  database: DEMO1
+  database: prod
   pool: 5
-  username: <%= ENV['APPNAME_DATABASE_USER'] %>
-  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+  username: postgres
+  password: a241986

@@ -1,5 +1,5 @@
-my_packages = c("data.table","twitteR","RColorBrewer"."plotly","Ckmeans.1d.dp","survival",
-"dplyr","ggplot2",ggfortify)
+my_packages = c("data.table","twitteR","RColorBrewer","plotly","Ckmeans.1d.dp","survival",
+"dplyr","ggplot2","ggfortify")
 
 
 install_if_missing = function(p) {

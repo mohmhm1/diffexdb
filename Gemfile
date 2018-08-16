@@ -27,6 +27,10 @@ group :development, :test do
   gem 'byebug'
 end
 group :development do
+  gem 'capistrano', '~> 3.8.2'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rbenv', github: "capistrano/rbenv"
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
@@ -43,10 +47,10 @@ group :development do
 end
 group :development, :test do
   gem 'sqlite3'
-  gem 'pg', '~> 0.15'
+  gem 'pg'
 end
 group :production do
-  gem 'pg', '~> 0.15'
+  gem 'pg'
   gem 'rails_12factor'
 end
 gem 'devise'

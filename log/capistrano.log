@@ -1,0 +1,176 @@
+# Logfile created on 2018-08-16 00:07:44 -0400 by logger.rb/53141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-16 00:07:44 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4b1685a7] Running [ -d $HOME/.rbenv/versions/2.0.0-p451 ] as deploy@142.93.115.149
+ DEBUG [4b1685a7] Command: [ -d $HOME/.rbenv/versions/2.0.0-p451 ]
+ DEBUG [165c796b] Finished in 1.868 seconds with exit status 1 (failed).
+  WARN rbenv: 2.0.0-p451 is not installed or not found in $HOME/.rbenv/versions/2.0.0-p451 on 142.93.115.149
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-16 00:12:10 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [96e52b1c] Running [ -d $HOME/.rbenv/versions/2.2.0 ] as deploy@142.93.115.149
+ DEBUG [96e52b1c] Command: [ -d $HOME/.rbenv/versions/2.2.0 ]
+ DEBUG [3e56c36c] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO [6ca1b460] Running /usr/bin/env mkdir -p /tmp as deploy@142.93.115.149
+ DEBUG [6ca1b460] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [a97fb525] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 100.0%
+  INFO [354882c6] Running /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh as deploy@142.93.115.149
+ DEBUG [354882c6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh )
+  INFO [3805291f] Finished in 0.142 seconds with exit status 0 (successful).
+  INFO [7f0b8bd1] Running /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD as deploy@142.93.115.149
+ DEBUG [7f0b8bd1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD )
+ DEBUG [8959852a] 	Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+  INFO [8959852a] Finished in 0.462 seconds with exit status 0 (successful).
+  INFO [b3af5cfe] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared /home/deploy/diffexdb/releases as deploy@142.93.115.149
+ DEBUG [b3af5cfe] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared /home/deploy/diffexdb/releases )
+  INFO [30db30ed] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [55685767] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/log /home/deploy/diffexdb/shared/tmp/pids /home/deploy/diffexdb/shared/tmp/cache /home/deploy/diffexdb/shared/tmp/sockets /home/deploy/diffexdb/shared/vendor/bundle /home/deploy/diffexdb/shared/public/system /home/deploy/diffexdb/shared/public/assets as deploy@142.93.115.149
+ DEBUG [55685767] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/log /home/deploy/diffexdb/shared/tmp/pids /home/deploy/diffexdb/shared/tmp/cache /home/deploy/diffexdb/shared/tmp/sockets /home/deploy/diffexdb/shared/vendor/bundle /home/deploy/diffexdb/shared/public/system /home/deploy/diffexdb/shared/public/assets )
+  INFO [8fdc6afa] Finished in 0.392 seconds with exit status 0 (successful).
+  INFO [ee77d0a8] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/config as deploy@142.93.115.149
+ DEBUG [ee77d0a8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/config )
+  INFO [8206c81f] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [7d0addbd] Running [ -f /home/deploy/diffexdb/shared/config/database.yml ] as deploy@142.93.115.149
+ DEBUG [7d0addbd] Command: [ -f /home/deploy/diffexdb/shared/config/database.yml ]
+ DEBUG [ef03f44d] Finished in 0.154 seconds with exit status 1 (failed).
+ ERROR linked file /home/deploy/diffexdb/shared/config/database.yml does not exist on 142.93.115.149
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-16 00:16:14 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [32d3a9d6] Running [ -d $HOME/.rbenv/versions/2.2.0 ] as deploy@142.93.115.149
+ DEBUG [32d3a9d6] Command: [ -d $HOME/.rbenv/versions/2.2.0 ]
+ DEBUG [d4ddf4ac] Finished in 0.903 seconds with exit status 0 (successful).
+  INFO [a1878f68] Running /usr/bin/env mkdir -p /tmp as deploy@142.93.115.149
+ DEBUG [a1878f68] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [de595180] Finished in 0.140 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 100.0%
+  INFO [3fc5cf06] Running /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh as deploy@142.93.115.149
+ DEBUG [3fc5cf06] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh )
+  INFO [49f49cf0] Finished in 0.156 seconds with exit status 0 (successful).
+  INFO [aa8d2bab] Running /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD as deploy@142.93.115.149
+ DEBUG [aa8d2bab] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD )
+ DEBUG [37de14d6] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+  INFO [37de14d6] Finished in 0.384 seconds with exit status 0 (successful).
+  INFO [52be7f05] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared /home/deploy/diffexdb/releases as deploy@142.93.115.149
+ DEBUG [52be7f05] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared /home/deploy/diffexdb/releases )
+  INFO [ddb8846e] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [956bbf65] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/log /home/deploy/diffexdb/shared/tmp/pids /home/deploy/diffexdb/shared/tmp/cache /home/deploy/diffexdb/shared/tmp/sockets /home/deploy/diffexdb/shared/vendor/bundle /home/deploy/diffexdb/shared/public/system /home/deploy/diffexdb/shared/public/assets as deploy@142.93.115.149
+ DEBUG [956bbf65] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/log /home/deploy/diffexdb/shared/tmp/pids /home/deploy/diffexdb/shared/tmp/cache /home/deploy/diffexdb/shared/tmp/sockets /home/deploy/diffexdb/shared/vendor/bundle /home/deploy/diffexdb/shared/public/system /home/deploy/diffexdb/shared/public/assets )
+  INFO [c9a74712] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [fa3c22a4] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/config as deploy@142.93.115.149
+ DEBUG [fa3c22a4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/config )
+  INFO [b651969a] Finished in 0.141 seconds with exit status 0 (successful).
+ DEBUG [f9e02cf3] Running [ -f /home/deploy/diffexdb/shared/config/database.yml ] as deploy@142.93.115.149
+ DEBUG [f9e02cf3] Command: [ -f /home/deploy/diffexdb/shared/config/database.yml ]
+ DEBUG [6e44c57e] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [e395ccd4] Running [ -f /home/deploy/diffexdb/current/REVISION ] as deploy@142.93.115.149
+ DEBUG [e395ccd4] Command: [ -f /home/deploy/diffexdb/current/REVISION ]
+ DEBUG [ca961cbd] Finished in 0.171 seconds with exit status 1 (failed).
+ DEBUG [3b0ebff3] Running [ -f /home/deploy/diffexdb/repo/HEAD ] as deploy@142.93.115.149
+ DEBUG [3b0ebff3] Command: [ -f /home/deploy/diffexdb/repo/HEAD ]
+ DEBUG [832dc233] Finished in 0.246 seconds with exit status 1 (failed).
+ DEBUG [88e3865e] Running if test ! -d /home/deploy/diffexdb; then echo "Directory does not exist '/home/deploy/diffexdb'" 1>&2; false; fi as deploy@142.93.115.149
+ DEBUG [88e3865e] Command: if test ! -d /home/deploy/diffexdb; then echo "Directory does not exist '/home/deploy/diffexdb'" 1>&2; false; fi
+ DEBUG [34188e98] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [610f3f7d] Running /usr/bin/env git clone --mirror git@github.com:mohmhm1/diffexdb.git /home/deploy/diffexdb/repo as deploy@142.93.115.149
+ DEBUG [610f3f7d] Command: cd /home/deploy/diffexdb && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git clone --mirror git@github.com:mohmhm1/diffexdb.git /home/deploy/diffexdb/repo )
+ DEBUG [a94d2156] 	Cloning into bare repository '/home/deploy/diffexdb/repo'...
+ DEBUG [a94d2156] 	warning: You appear to have cloned an empty repository.
+  INFO [a94d2156] Finished in 0.492 seconds with exit status 0 (successful).
+ DEBUG [f69f1453] Running if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi as deploy@142.93.115.149
+ DEBUG [f69f1453] Command: if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [3219ab17] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [2e4f19d1] Running /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git as deploy@142.93.115.149
+ DEBUG [2e4f19d1] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git )
+  INFO [c79f4aea] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [b1d5e0b1] Running /usr/bin/env git remote update --prune as deploy@142.93.115.149
+ DEBUG [b1d5e0b1] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [98e8167c] 	Fetching origin
+  INFO [98e8167c] Finished in 0.388 seconds with exit status 0 (successful).
+ DEBUG [181f2e53] Running if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi as deploy@142.93.115.149
+ DEBUG [181f2e53] Command: if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [87bdd800] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [3c2070b5] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/releases/20180816041617 as deploy@142.93.115.149
+ DEBUG [3c2070b5] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/releases/20180816041617 )
+  INFO [b50ea106] Finished in 0.139 seconds with exit status 0 (successful).
+  INFO [d44e6f00] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/diffexdb/releases/20180816041617 as deploy@142.93.115.149
+ DEBUG [d44e6f00] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/diffexdb/releases/20180816041617 )
+ DEBUG [e6503428] 	fatal: Not a valid object name
+ DEBUG [e6503428] 	tar: 
+ DEBUG [e6503428] 	This does not look like a tar archive
+ DEBUG [e6503428] 	
+ DEBUG [e6503428] 	tar: 
+ DEBUG [e6503428] 	Exiting with failure status due to previous errors
+ DEBUG [e6503428] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-16 00:21:33 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b5beadfc] Running [ -d $HOME/.rbenv/versions/2.2.0 ] as deploy@142.93.115.149
+ DEBUG [b5beadfc] Command: [ -d $HOME/.rbenv/versions/2.2.0 ]
+ DEBUG [243aad92] Finished in 0.738 seconds with exit status 0 (successful).
+  INFO [6018eed2] Running /usr/bin/env mkdir -p /tmp as deploy@142.93.115.149
+ DEBUG [6018eed2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [dfe9bd7b] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 100.0%
+  INFO [60f1d382] Running /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh as deploy@142.93.115.149
+ DEBUG [60f1d382] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh )
+  INFO [df0eaac8] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [2669223d] Running /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD as deploy@142.93.115.149
+ DEBUG [2669223d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD )
+  INFO [94b85e96] Finished in 0.392 seconds with exit status 0 (successful).
+  INFO [144eb104] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared /home/deploy/diffexdb/releases as deploy@142.93.115.149
+ DEBUG [144eb104] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared /home/deploy/diffexdb/releases )
+  INFO [1d2c8643] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [ad60aac6] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/log /home/deploy/diffexdb/shared/tmp/pids /home/deploy/diffexdb/shared/tmp/cache /home/deploy/diffexdb/shared/tmp/sockets /home/deploy/diffexdb/shared/vendor/bundle /home/deploy/diffexdb/shared/public/system /home/deploy/diffexdb/shared/public/assets as deploy@142.93.115.149
+ DEBUG [ad60aac6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/log /home/deploy/diffexdb/shared/tmp/pids /home/deploy/diffexdb/shared/tmp/cache /home/deploy/diffexdb/shared/tmp/sockets /home/deploy/diffexdb/shared/vendor/bundle /home/deploy/diffexdb/shared/public/system /home/deploy/diffexdb/shared/public/assets )
+  INFO [f1e642b2] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [8cae1e4d] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/config as deploy@142.93.115.149
+ DEBUG [8cae1e4d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/shared/config )
+  INFO [3fb7cc97] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [4c157882] Running [ -f /home/deploy/diffexdb/shared/config/database.yml ] as deploy@142.93.115.149
+ DEBUG [4c157882] Command: [ -f /home/deploy/diffexdb/shared/config/database.yml ]
+ DEBUG [fb1bf7a9] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [c1cc2540] Running [ -f /home/deploy/diffexdb/current/REVISION ] as deploy@142.93.115.149
+ DEBUG [c1cc2540] Command: [ -f /home/deploy/diffexdb/current/REVISION ]
+ DEBUG [459a3b0e] Finished in 0.382 seconds with exit status 1 (failed).
+ DEBUG [0d53268d] Running [ -f /home/deploy/diffexdb/repo/HEAD ] as deploy@142.93.115.149
+ DEBUG [0d53268d] Command: [ -f /home/deploy/diffexdb/repo/HEAD ]
+ DEBUG [55e4ebd1] Finished in 0.138 seconds with exit status 1 (failed).
+ DEBUG [45961a9f] Running if test ! -d /home/deploy/diffexdb; then echo "Directory does not exist '/home/deploy/diffexdb'" 1>&2; false; fi as deploy@142.93.115.149
+ DEBUG [45961a9f] Command: if test ! -d /home/deploy/diffexdb; then echo "Directory does not exist '/home/deploy/diffexdb'" 1>&2; false; fi
+ DEBUG [b6f15664] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [b9f2cefe] Running /usr/bin/env git clone --mirror git@github.com:mohmhm1/diffexdb.git /home/deploy/diffexdb/repo as deploy@142.93.115.149
+ DEBUG [b9f2cefe] Command: cd /home/deploy/diffexdb && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git clone --mirror git@github.com:mohmhm1/diffexdb.git /home/deploy/diffexdb/repo )
+ DEBUG [2f50d937] 	Cloning into bare repository '/home/deploy/diffexdb/repo'...
+ DEBUG [2f50d937] 	warning: You appear to have cloned an empty repository.
+  INFO [2f50d937] Finished in 0.416 seconds with exit status 0 (successful).
+ DEBUG [bbc14c88] Running if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi as deploy@142.93.115.149
+ DEBUG [bbc14c88] Command: if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [c8c7d798] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [cf4034f6] Running /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git as deploy@142.93.115.149
+ DEBUG [cf4034f6] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git )
+  INFO [8872c775] Finished in 0.140 seconds with exit status 0 (successful).
+  INFO [3915afc2] Running /usr/bin/env git remote update --prune as deploy@142.93.115.149
+ DEBUG [3915afc2] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7cf9fdeb] 	Fetching origin
+  INFO [7cf9fdeb] Finished in 0.454 seconds with exit status 0 (successful).
+ DEBUG [089cf4d2] Running if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi as deploy@142.93.115.149
+ DEBUG [089cf4d2] Command: if test ! -d /home/deploy/diffexdb/repo; then echo "Directory does not exist '/home/deploy/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [3e36a187] Finished in 0.488 seconds with exit status 0 (successful).
+  INFO [9f2a4153] Running /usr/bin/env mkdir -p /home/deploy/diffexdb/releases/20180816042136 as deploy@142.93.115.149
+ DEBUG [9f2a4153] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env mkdir -p /home/deploy/diffexdb/releases/20180816042136 )
+  INFO [8d914b83] Finished in 0.192 seconds with exit status 0 (successful).
+  INFO [17de0111] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/diffexdb/releases/20180816042136 as deploy@142.93.115.149
+ DEBUG [17de0111] Command: cd /home/deploy/diffexdb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.2.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/diffexdb/releases/20180816042136 )
+ DEBUG [dc0a5006] 	fatal: Not a valid object name
+ DEBUG [dc0a5006] 	tar: 
+ DEBUG [dc0a5006] 	This does not look like a tar archive
+ DEBUG [dc0a5006] 	
+ DEBUG [dc0a5006] 	tar: 
+ DEBUG [dc0a5006] 	Exiting with failure status due to previous errors
+ DEBUG [dc0a5006] 	

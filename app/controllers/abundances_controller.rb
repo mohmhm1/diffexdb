@@ -396,7 +396,6 @@ if File.exist?('app/assets/data.csv')
 #R.eval("rm(list=ls())")
 R.eval("library(data.table)")
 R.eval("library(survival)")
-R.eval("library(ranger)")
 R.eval("library(ggplot2)")
 R.eval("library(dplyr)")
 R.eval("library(ggfortify)")
@@ -533,6 +532,17 @@ R.eval("ggsurv1 <- function(s, CI = 'def', plot.cens = T, surv.col = 'gg.def',
                    ylab, main)}
   pl
 }")
+R.eval("saveWidgetFix <- function (widget,file,...) {
+  ## A wrapper to saveWidget which compensates for arguable BUG in
+  ## saveWidget which requires `file` to be in current working
+  ## directory.
+  wd<-getwd()
+  on.exit(setwd(wd))
+  outDir<-dirname(file)
+  file<-basename(file)
+  setwd(outDir);
+  saveWidget(widget,file=file,...)
+}")
 R.eval("names1 <- as.vector(dt$V3[1])")
 R.eval("log_rank <-survival::survdiff(Surv(TUfin$V11, TUfin$V12) ~ TUfin$V2, data=TUfin)")
 R.eval('z <-ggsurv1(cox_fit,  main = paste("Cox Hazards Regression for",names1)) +  theme_bw() + ggplot2::geom_text(aes(label = sprintf("log-rank test p-value: %0.2g",pchisq(log_rank$chisq, df = 1, lower.tail = F)),x = 2000, y = 0.9))')
@@ -555,7 +565,6 @@ end
 if File.exist?('app/assets/data.csv')
 R.eval("library(data.table)")
 R.eval("library(survival)")
-R.eval("library(ranger)")
 R.eval("library(ggplot2)")
 R.eval("library(dplyr)")
 R.eval("library(ggfortify)")
@@ -753,7 +762,6 @@ end
 if File.exist?('app/assets/data.csv')
 R.eval("library(data.table)")
 R.eval("library(survival)")
-R.eval("library(ranger)")
 R.eval("library(ggplot2)")
 R.eval("library(dplyr)")
 R.eval("library(ggfortify)")

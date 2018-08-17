@@ -7872,3 +7872,556 @@ Please ensure you restarted your application after installing Devise or setting 
  DEBUG [25125c16] 	
  DEBUG [25125c16] 	(See full trace by running task with --trace)
  DEBUG [25125c16] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-17 17:53:49 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [690af760] Running [ -d ~/.rvm ] on 142.93.204.216
+ DEBUG [690af760] Command: [ -d ~/.rvm ]
+ DEBUG [c273872b] Finished in 0.999 seconds with exit status 0 (successful).
+ DEBUG [e160ace7] Running ~/.rvm/bin/rvm version on 142.93.204.216
+ DEBUG [e160ace7] Command: ~/.rvm/bin/rvm version
+ DEBUG [f3457f74] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [f3457f74] 	
+ DEBUG [f3457f74] Finished in 0.296 seconds with exit status 0 (successful).
+ DEBUG [806d04d8] Running ~/.rvm/bin/rvm current on 142.93.204.216
+ DEBUG [806d04d8] Command: ~/.rvm/bin/rvm current
+ DEBUG [5a7dcc38] 	ruby-2.3.0
+ DEBUG [5a7dcc38] 	
+ DEBUG [5a7dcc38] Finished in 0.699 seconds with exit status 0 (successful).
+ DEBUG [872fea8b] Running ~/.rvm/bin/rvm default do ruby --version on 142.93.204.216
+ DEBUG [872fea8b] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [9939b38c] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [9939b38c] 	
+ DEBUG [9939b38c] Finished in 1.024 seconds with exit status 0 (successful).
+  INFO [0d1ad7a7] Running /usr/bin/env mkdir -p /tmp on 142.93.204.216
+ DEBUG [0d1ad7a7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4d076be0] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 100.0%
+  INFO [5d6193ec] Running /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh on 142.93.204.216
+ DEBUG [5d6193ec] Command: /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh
+  INFO [a0236400] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [b974138b] Running /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD on 142.93.204.216
+ DEBUG [b974138b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD )
+ DEBUG [3b474126] 	b86a017de206ceb01983618489e93161ad6dd08e
+ DEBUG [3b474126] 		
+ DEBUG [3b474126] 	HEAD
+ DEBUG [3b474126] 	
+  INFO [3b474126] Finished in 0.351 seconds with exit status 0 (successful).
+  INFO [4d56f53f] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared /home/deploy/apps/diffexdb/releases on 142.93.204.216
+ DEBUG [4d56f53f] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared /home/deploy/apps/diffexdb/releases
+  INFO [27c62cc9] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [a98f9634] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/public/assets on 142.93.204.216
+ DEBUG [a98f9634] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/public/assets
+  INFO [20c436f3] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [2cceb7f3] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/config on 142.93.204.216
+ DEBUG [2cceb7f3] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/config
+  INFO [756b1d82] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [c1365850] Running [ -f /home/deploy/apps/diffexdb/shared/config/secrets.yml ] on 142.93.204.216
+ DEBUG [c1365850] Command: [ -f /home/deploy/apps/diffexdb/shared/config/secrets.yml ]
+ DEBUG [15bde720] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [d8507d73] Running [ -f /home/deploy/apps/diffexdb/shared/puma.rb ] on 142.93.204.216
+ DEBUG [d8507d73] Command: [ -f /home/deploy/apps/diffexdb/shared/puma.rb ]
+ DEBUG [3be93582] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [64b2a92e] Running [ -f /home/deploy/apps/diffexdb/current/REVISION ] on 142.93.204.216
+ DEBUG [64b2a92e] Command: [ -f /home/deploy/apps/diffexdb/current/REVISION ]
+ DEBUG [e2acab49] Finished in 0.097 seconds with exit status 1 (failed).
+ DEBUG [1cd0371f] Running [ -f /home/deploy/apps/diffexdb/repo/HEAD ] on 142.93.204.216
+ DEBUG [1cd0371f] Command: [ -f /home/deploy/apps/diffexdb/repo/HEAD ]
+ DEBUG [12166c50] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/diffexdb/repo
+ DEBUG [8d399068] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [8d399068] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [4eccdd3b] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [fa1ebb0b] Running /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git on 142.93.204.216
+ DEBUG [fa1ebb0b] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git )
+  INFO [113693be] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [985b38a4] Running /usr/bin/env git remote update --prune on 142.93.204.216
+ DEBUG [985b38a4] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d2d0b98c] 	Fetching origin
+ DEBUG [d2d0b98c] 	
+ DEBUG [d2d0b98c] 	remote: Counting objects: 6, done.[K
+ DEBUG [d2d0b98c] 	
+ DEBUG [d2d0b98c] 	remote: Compressing objects: 100% (1/1)   [K
+ DEBUG [d2d0b98c] 	remote: Compressing objects: 100% (1/1), done.[K
+ DEBUG [d2d0b98c] 	
+ DEBUG [d2d0b98c] 	remote: Total 6 (delta 5), reused 6 (delta 5), pack-reused 0[K
+ DEBUG [d2d0b98c] 	
+ DEBUG [d2d0b98c] 	Unpacking objects:  16% (1/6)   
+ DEBUG [d2d0b98c] 	Unpacking objects:  33% (2/6)   
+ DEBUG [d2d0b98c] 	Unpacking objects:  50% (3/6)   
+ DEBUG [d2d0b98c] 	Unpacking objects:  66% (4/6)   
+ DEBUG [d2d0b98c] 	Unpacking objects:  83% (5/6)   
+ DEBUG [d2d0b98c] 	Unpacking objects: 100% (6/6)   
+ DEBUG [d2d0b98c] 	Unpacking objects: 100% (6/6), done.
+ DEBUG [d2d0b98c] 	
+ DEBUG [d2d0b98c] 	From github.com:mohmhm1/diffexdb
+ DEBUG [d2d0b98c] 	
+ DEBUG [d2d0b98c] 	   cf15311..b86a017  master     -> master
+ DEBUG [d2d0b98c] 	
+  INFO [d2d0b98c] Finished in 0.541 seconds with exit status 0 (successful).
+ DEBUG [29488105] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [29488105] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [c3b7d197] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [30cd2590] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817215353 on 142.93.204.216
+ DEBUG [30cd2590] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817215353 )
+  INFO [1abbc8ab] Finished in 0.111 seconds with exit status 0 (successful).
+  INFO [462baf9d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/diffexdb/releases/20180817215353 on 142.93.204.216
+ DEBUG [462baf9d] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/diffexdb/releases/20180817215353 )
+  INFO [b1ececf5] Finished in 0.991 seconds with exit status 0 (successful).
+ DEBUG [9c7e437e] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [9c7e437e] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [6dbab3d3] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [5568850f] Running /usr/bin/env git rev-list --max-count=1 master on 142.93.204.216
+ DEBUG [5568850f] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [86d38537] 	b86a017de206ceb01983618489e93161ad6dd08e
+ DEBUG [86d38537] 	
+ DEBUG [86d38537] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [12b23a72] Running if test ! -d /home/deploy/apps/diffexdb/releases/20180817215353; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817215353'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [12b23a72] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20180817215353; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817215353'" 1>&2; false; fi
+ DEBUG [527dce9a] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [8a2f5214] Running /usr/bin/env echo "b86a017de206ceb01983618489e93161ad6dd08e" >> REVISION on 142.93.204.216
+ DEBUG [8a2f5214] Command: cd /home/deploy/apps/diffexdb/releases/20180817215353 && /usr/bin/env echo "b86a017de206ceb01983618489e93161ad6dd08e" >> REVISION
+  INFO [ee7f4da1] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [16ada790] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817215353/config on 142.93.204.216
+ DEBUG [16ada790] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817215353/config
+  INFO [f79051ad] Finished in 0.088 seconds with exit status 0 (successful).
+ DEBUG [0f3b9efb] Running [ -L /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml ] on 142.93.204.216
+ DEBUG [0f3b9efb] Command: [ -L /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml ]
+ DEBUG [d2401152] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [ca7b6472] Running [ -f /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml ] on 142.93.204.216
+ DEBUG [ca7b6472] Command: [ -f /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml ]
+ DEBUG [39538d72] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [2f48c79a] Running /usr/bin/env rm /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml on 142.93.204.216
+ DEBUG [2f48c79a] Command: /usr/bin/env rm /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml
+  INFO [71779a70] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [7de3e71a] Running /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/config/secrets.yml /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml on 142.93.204.216
+ DEBUG [7de3e71a] Command: /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/config/secrets.yml /home/deploy/apps/diffexdb/releases/20180817215353/config/secrets.yml
+  INFO [10df03aa] Finished in 0.104 seconds with exit status 0 (successful).
+  INFO [e79bee10] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817215353/public on 142.93.204.216
+ DEBUG [e79bee10] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817215353/public
+  INFO [b6d52db2] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [87e77b0a] Running [ -L /home/deploy/apps/diffexdb/releases/20180817215353/public/assets ] on 142.93.204.216
+ DEBUG [87e77b0a] Command: [ -L /home/deploy/apps/diffexdb/releases/20180817215353/public/assets ]
+ DEBUG [a7d43ea5] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [8cf17eed] Running [ -d /home/deploy/apps/diffexdb/releases/20180817215353/public/assets ] on 142.93.204.216
+ DEBUG [8cf17eed] Command: [ -d /home/deploy/apps/diffexdb/releases/20180817215353/public/assets ]
+ DEBUG [70b42b3e] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [fb50b1c8] Running /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20180817215353/public/assets on 142.93.204.216
+ DEBUG [fb50b1c8] Command: /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20180817215353/public/assets
+  INFO [af4fbb09] Finished in 0.140 seconds with exit status 0 (successful).
+  INFO [fdbca56d] Running /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/public/assets /home/deploy/apps/diffexdb/releases/20180817215353/public/assets on 142.93.204.216
+ DEBUG [fdbca56d] Command: /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/public/assets /home/deploy/apps/diffexdb/releases/20180817215353/public/assets
+  INFO [bf3f3913] Finished in 0.096 seconds with exit status 0 (successful).
+ DEBUG [0df40652] Running if test ! -d /home/deploy/apps/diffexdb/releases/20180817215353; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817215353'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [0df40652] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20180817215353; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817215353'" 1>&2; false; fi
+ DEBUG [e4d921ec] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [4a3346a3] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/diffexdb/shared/bundle --without development test --deployment --quiet on 142.93.204.216
+ DEBUG [4a3346a3] Command: cd /home/deploy/apps/diffexdb/releases/20180817215353 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/diffexdb/shared/bundle --without development test --deployment --quiet
+ DEBUG [c1c4bbb6] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [c1c4bbb6] 	
+ DEBUG [c1c4bbb6] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20180817215353/Gemfile'.
+ DEBUG [c1c4bbb6] 	
+ DEBUG [c1c4bbb6] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [c1c4bbb6] 	
+ DEBUG [c1c4bbb6] 	[0m
+ DEBUG [c1c4bbb6] 	
+ DEBUG [c1c4bbb6] 	[0m
+  INFO [c1c4bbb6] Finished in 1.138 seconds with exit status 0 (successful).
+ DEBUG [d8f49291] Running if test ! -d /home/deploy/apps/diffexdb/releases/20180817215353; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817215353'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [d8f49291] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20180817215353; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817215353'" 1>&2; false; fi
+ DEBUG [d5e65d66] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [49219dec] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 142.93.204.216
+ DEBUG [49219dec] Command: cd /home/deploy/apps/diffexdb/releases/20180817215353 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [bec20153] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20180817215353/Gemfile'.
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	[0m
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	[0m
+ DEBUG [bec20153] 	rake aborted!
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	Gem::LoadError: Specified 'postgresql' for database adapter, but the gem is not loaded. Add `gem 'pg'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/connection_specification.rb:177:in `rescue in spec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_handling.rb:50:in `establish_connection'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:44:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/base.rb:315:in `<module:ActiveRecord>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/base.rb:26:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib
+ DEBUG [bec20153] 	/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/app/models/user.rb:1:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:360:in `require_or_load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:494:in `load_missing_constant'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:184:in `const_missing'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:261:in `const_get'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:261:in `block in constantize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `inject'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `constantize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:566:in `get'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:597:in `constantize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/a
+ DEBUG [bec20153] 	pps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise.rb:316:in `get'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:83:in `to'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:78:in `modules'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:95:in `routes'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:162:in `default_used_route'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:72:in `initialize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise.rb:346:in `new'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise.rb:346:in `add_mapping'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `devise_for'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/config/routes.rb:2:in `block in <top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:410:in `draw'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/config/routes.rb:1:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/hom
+ DEBUG [bec20153] 	e/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:16:in `reload!'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/file_update_checker.rb:75:in `execute'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:27:in `updater'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `run'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:55:in `block in run_initializers'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:54:in `run_initializers'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/applicat
+ DEBUG [bec20153] 	ion.rb:352:in `initialize!'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/config/environment.rb:5:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:328:in `require_environment!'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/
+ DEBUG [bec20153] 	base.rb:466:in `start'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:18:in `start'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/exe/bundle:22:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:24:in `eval'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	Caused by:
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	Gem::LoadError: pg is not part of the bundle. Add it to your Gemfile.
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/rubygems_integration.rb:408:in `block (2 levels) in replace_gem'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/postgresql_adapter.rb:16:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_adapters/connection_specification.rb:175:in `spec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/connection_handling.rb:50:in `establish_connection'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:44:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/activ
+ DEBUG [bec20153] 	e_record/base.rb:315:in `<module:ActiveRecord>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.6/lib/active_record/base.rb:26:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/app/models/user.rb:1:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:360:in `require_or_load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:494:in `load_missing_constant'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:184:in `const_missing'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:261:in `const_get'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:261:in `block in constantize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/ap
+ DEBUG [bec20153] 	ps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `inject'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/inflector/methods.rb:259:in `constantize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:566:in `get'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:597:in `constantize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise.rb:316:in `get'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:83:in `to'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:78:in `modules'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:95:in `routes'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:162:in `default_used_route'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/mapping.rb:72:in `initialize'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise.rb:346:in `new'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise.rb:346:in `add_mapping'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:242:in `devise_for'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/config/routes.rb:2:in `block in <top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routin
+ DEBUG [bec20153] 	g/route_set.rb:432:in `instance_exec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:410:in `draw'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/config/routes.rb:1:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `each'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:16:in `reload!'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/file_update_checker.rb:75:in `execute'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:27:in `updater'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rail
+ DEBUG [bec20153] 	ties-4.2.6/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `run'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:55:in `block in run_initializers'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:54:in `run_initializers'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:352:in `initialize!'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/releases/20180817215353/config/environment.rb:5:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:328:in `require_environment!'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems
+ DEBUG [bec20153] 	/bundler-1.16.3/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [bec20153] 	
+/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [bec20153] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:18:in `start'
+/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/exe/bundle:30:in `block in <top (required)>'
+/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/exe/bundle:22:in `<top (required)>'
+ DEBUG [bec20153] 	
+/home/deploy/.rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+/home/deploy/.rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+/home/deploy/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:24:in `eval'
+/home/deploy/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => environment
+ DEBUG [bec20153] 	
+ DEBUG [bec20153] 	(See full trace by running task with --trace)
+ DEBUG [bec20153] 	

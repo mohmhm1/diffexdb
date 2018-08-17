@@ -32,7 +32,7 @@ gem 'high_voltage'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'devise'
-
+gem 'pg'
 group :development do
     gem 'capistrano',         require: false
     gem 'capistrano-rvm',     require: false
@@ -44,10 +44,10 @@ end
 
 group :development, :test do
   gem 'sqlite3'
-  #gem 'pg','~> 0.21'
+  gem 'pg'
 end
 group :production do
-  gem 'pg','~> 0.21'
+  gem 'pg'
   #gem 'rails_12factor'
 end
 

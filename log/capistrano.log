@@ -5052,3 +5052,10 @@ Please ensure you restarted your application after installing Devise or setting 
  DEBUG [f525cb27] Command: [ -d ~/.rvm ]
  DEBUG [64770d3c] Running [ -d ~/.rvm ] on 142.93.204.216
  DEBUG [64770d3c] Command: [ -d ~/.rvm ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-17 16:27:36 -0400 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e8d36701] Running [ -d ~/.rvm ] as deploy@142.93.115.149
+ DEBUG [e8d36701] Command: [ -d ~/.rvm ]
+ DEBUG [3c2aa1eb] Running [ -d ~/.rvm ] on 142.93.204.216
+ DEBUG [3c2aa1eb] Command: [ -d ~/.rvm ]

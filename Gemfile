@@ -27,10 +27,11 @@ group :development, :test do
   gem 'byebug'
 end
 group :development do
-  gem 'capistrano', '~> 3.8.2'
-gem 'capistrano-bundler', '~> 1.1.2'
-gem 'capistrano-rails', '~> 1.1.1'
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
+    gem 'capistrano',         require: false
+    gem 'capistrano-rvm',     require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
   gem 'web-console', '~> 2.0'
   gem 'spring'
 gem 'bootstrap-sass'

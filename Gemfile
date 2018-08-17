@@ -45,6 +45,7 @@ group :development do
   gem 'rails_layout'
   gem 'thin'
 end
+gem 'puma'
 group :development, :test do
   gem 'sqlite3'
   gem 'pg','~> 0.21'

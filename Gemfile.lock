@@ -293,6 +293,7 @@ DEPENDENCIES
   jquery-turbolinks
   lazy_high_charts
   loading_screen (~> 0.2.3)
+  net-ssh
   paper_trail
   pg (~> 0.21)
   popper_js (~> 1.12.9)

@@ -7334,3 +7334,276 @@ Please ensure you restarted your application after installing Devise or setting 
  DEBUG [84cdf675] 	
  DEBUG [84cdf675] 	    config.web_console.development_only = false
  DEBUG [84cdf675] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-17 17:36:18 -0400 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bd3c36ce] Running [ -d ~/.rvm ] on 142.93.204.216
+ DEBUG [bd3c36ce] Command: [ -d ~/.rvm ]
+ DEBUG [a041e666] Finished in 0.635 seconds with exit status 0 (successful).
+ DEBUG [655fe6ba] Running ~/.rvm/bin/rvm version on 142.93.204.216
+ DEBUG [655fe6ba] Command: ~/.rvm/bin/rvm version
+ DEBUG [15ca36fc] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [15ca36fc] 	
+ DEBUG [15ca36fc] Finished in 0.437 seconds with exit status 0 (successful).
+ DEBUG [5afdb6bf] Running ~/.rvm/bin/rvm current on 142.93.204.216
+ DEBUG [5afdb6bf] Command: ~/.rvm/bin/rvm current
+ DEBUG [68af9805] 	ruby-2.3.0
+ DEBUG [68af9805] 	
+ DEBUG [68af9805] Finished in 0.313 seconds with exit status 0 (successful).
+ DEBUG [e23ac64f] Running ~/.rvm/bin/rvm default do ruby --version on 142.93.204.216
+ DEBUG [e23ac64f] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [80e86c19] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [80e86c19] 	
+ DEBUG [80e86c19] Finished in 0.509 seconds with exit status 0 (successful).
+  INFO [e432598d] Running /usr/bin/env mkdir -p /tmp on 142.93.204.216
+ DEBUG [e432598d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6d0b828c] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 100.0%
+  INFO [2255114b] Running /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh on 142.93.204.216
+ DEBUG [2255114b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh
+  INFO [ea790530] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [aedd199b] Running /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD on 142.93.204.216
+ DEBUG [aedd199b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD )
+ DEBUG [c7e8244c] 	02a81f4676ad2b17899fded2606031af114d3ddc
+ DEBUG [c7e8244c] 		
+ DEBUG [c7e8244c] 	HEAD
+ DEBUG [c7e8244c] 	
+  INFO [c7e8244c] Finished in 0.329 seconds with exit status 0 (successful).
+  INFO [33b6e533] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared /home/deploy/apps/diffexdb/releases on 142.93.204.216
+ DEBUG [33b6e533] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared /home/deploy/apps/diffexdb/releases
+  INFO [681b86e7] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [7e2f100f] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/public/assets on 142.93.204.216
+ DEBUG [7e2f100f] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/public/assets
+  INFO [415e668a] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [16be3122] Running [ -f /home/deploy/apps/diffexdb/shared/puma.rb ] on 142.93.204.216
+ DEBUG [16be3122] Command: [ -f /home/deploy/apps/diffexdb/shared/puma.rb ]
+ DEBUG [97245f8d] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [ea4aba16] Running [ -f /home/deploy/apps/diffexdb/current/REVISION ] on 142.93.204.216
+ DEBUG [ea4aba16] Command: [ -f /home/deploy/apps/diffexdb/current/REVISION ]
+ DEBUG [45d5d0bf] Finished in 0.100 seconds with exit status 1 (failed).
+ DEBUG [e73d4551] Running [ -f /home/deploy/apps/diffexdb/repo/HEAD ] on 142.93.204.216
+ DEBUG [e73d4551] Command: [ -f /home/deploy/apps/diffexdb/repo/HEAD ]
+ DEBUG [cef51a75] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/diffexdb/repo
+ DEBUG [c60ee9c2] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [c60ee9c2] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [104ff0f7] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [bc910685] Running /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git on 142.93.204.216
+ DEBUG [bc910685] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git )
+  INFO [4e1a1af8] Finished in 0.424 seconds with exit status 0 (successful).
+  INFO [476eb19e] Running /usr/bin/env git remote update --prune on 142.93.204.216
+ DEBUG [476eb19e] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b5116208] 	Fetching origin
+ DEBUG [b5116208] 	
+ DEBUG [b5116208] 	remote: Counting objects: 11, done.[K
+ DEBUG [b5116208] 	
+ DEBUG [b5116208] 	remote: Compressing objects:  50% (1/2)   [K
+ DEBUG [b5116208] 	remote: Compressing objects: 100% (2/2)   [K
+ DEBUG [b5116208] 	remote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [b5116208] 	
+ DEBUG [b5116208] 	Unpacking objects:   9% (1/11)   
+ DEBUG [b5116208] 	Unpacking objects:  18% (2/11)   
+ DEBUG [b5116208] 	Unpacking objects:  27% (3/11)   
+ DEBUG [b5116208] 	Unpacking objects:  36% (4/11)   
+ DEBUG [b5116208] 	Unpacking objects:  45% (5/11)   
+ DEBUG [b5116208] 	Unpacking objects:  54% (6/11)   
+ DEBUG [b5116208] 	Unpacking objects:  63% (7/11)   
+ DEBUG [b5116208] 	Unpacking objects:  72% (8/11)   
+ DEBUG [b5116208] 	Unpacking objects:  81% (9/11)   
+ DEBUG [b5116208] 	Unpacking objects:  90% (10/11)   
+ DEBUG [b5116208] 	Unpacking objects: 100% (11/11)   
+ DEBUG [b5116208] 	Unpacking objects: 100% (11/11), done.
+ DEBUG [b5116208] 	
+ DEBUG [b5116208] 	remote: Total 11 (delta 6), reused 11 (delta 6), pack-reused 0[K
+ DEBUG [b5116208] 	
+ DEBUG [b5116208] 	From github.com:mohmhm1/diffexdb
+ DEBUG [b5116208] 	
+ DEBUG [b5116208] 	   9894f3c..02a81f4  master     -> master
+ DEBUG [b5116208] 	
+  INFO [b5116208] Finished in 0.875 seconds with exit status 0 (successful).
+ DEBUG [9679a248] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [9679a248] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [8309c078] Finished in 0.183 seconds with exit status 0 (successful).
+  INFO [1860f619] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817213621 on 142.93.204.216
+ DEBUG [1860f619] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817213621 )
+  INFO [5dd27a4c] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [bc97cc45] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/diffexdb/releases/20180817213621 on 142.93.204.216
+ DEBUG [bc97cc45] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/diffexdb/releases/20180817213621 )
+  INFO [f3fc9cdf] Finished in 1.038 seconds with exit status 0 (successful).
+ DEBUG [78381dad] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [78381dad] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [949777f0] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [29888de8] Running /usr/bin/env git rev-list --max-count=1 master on 142.93.204.216
+ DEBUG [29888de8] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d14afc1e] 	02a81f4676ad2b17899fded2606031af114d3ddc
+ DEBUG [d14afc1e] 	
+ DEBUG [d14afc1e] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [58c6916a] Running if test ! -d /home/deploy/apps/diffexdb/releases/20180817213621; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817213621'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [58c6916a] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20180817213621; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817213621'" 1>&2; false; fi
+ DEBUG [d17d85db] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [87b9e7ce] Running /usr/bin/env echo "02a81f4676ad2b17899fded2606031af114d3ddc" >> REVISION on 142.93.204.216
+ DEBUG [87b9e7ce] Command: cd /home/deploy/apps/diffexdb/releases/20180817213621 && /usr/bin/env echo "02a81f4676ad2b17899fded2606031af114d3ddc" >> REVISION
+  INFO [68dd9e44] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [5173fbd9] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817213621/public on 142.93.204.216
+ DEBUG [5173fbd9] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20180817213621/public
+  INFO [30691d29] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [a3f6151a] Running [ -L /home/deploy/apps/diffexdb/releases/20180817213621/public/assets ] on 142.93.204.216
+ DEBUG [a3f6151a] Command: [ -L /home/deploy/apps/diffexdb/releases/20180817213621/public/assets ]
+ DEBUG [6e792681] Finished in 0.084 seconds with exit status 1 (failed).
+ DEBUG [ea540968] Running [ -d /home/deploy/apps/diffexdb/releases/20180817213621/public/assets ] on 142.93.204.216
+ DEBUG [ea540968] Command: [ -d /home/deploy/apps/diffexdb/releases/20180817213621/public/assets ]
+ DEBUG [066a2fe4] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [759bd30a] Running /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20180817213621/public/assets on 142.93.204.216
+ DEBUG [759bd30a] Command: /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20180817213621/public/assets
+  INFO [c4b5f2b3] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [a172bfd5] Running /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/public/assets /home/deploy/apps/diffexdb/releases/20180817213621/public/assets on 142.93.204.216
+ DEBUG [a172bfd5] Command: /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/public/assets /home/deploy/apps/diffexdb/releases/20180817213621/public/assets
+  INFO [bbecf141] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [b5a22d95] Running if test ! -d /home/deploy/apps/diffexdb/releases/20180817213621; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817213621'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [b5a22d95] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20180817213621; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817213621'" 1>&2; false; fi
+ DEBUG [68e0272f] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [9442812c] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/diffexdb/shared/bundle --without development test --deployment --quiet on 142.93.204.216
+ DEBUG [9442812c] Command: cd /home/deploy/apps/diffexdb/releases/20180817213621 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/diffexdb/shared/bundle --without development test --deployment --quiet
+ DEBUG [0ce30d14] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [0ce30d14] 	
+ DEBUG [0ce30d14] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20180817213621/Gemfile'.
+ DEBUG [0ce30d14] 	
+ DEBUG [0ce30d14] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [0ce30d14] 	
+ DEBUG [0ce30d14] 	[0m
+ DEBUG [0ce30d14] 	
+ DEBUG [0ce30d14] 	[0m
+  INFO [0ce30d14] Finished in 1.079 seconds with exit status 0 (successful).
+ DEBUG [a6ab7666] Running if test ! -d /home/deploy/apps/diffexdb/releases/20180817213621; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817213621'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [a6ab7666] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20180817213621; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20180817213621'" 1>&2; false; fi
+ DEBUG [6fcdc9c8] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [c9320534] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 142.93.204.216
+ DEBUG [c9320534] Command: cd /home/deploy/apps/diffexdb/releases/20180817213621 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [677223a7] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20180817213621/Gemfile'.
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	[0m
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	[0m
+ DEBUG [677223a7] 	rake aborted!
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	Devise.secret_key was not set. Please add the following to your Devise initializer:
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	  config.secret_key = 'db186b8936bffb8c19c89c4f877c330f268643e5c0c870f5714a70d890c11cd6d1a72867b94e4db89c6210a3ee76bfb6fb95c87771a788b0eebab89df7a08710'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	Please ensure you restarted your application after installing Devise or setting the key.
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:500:in `raise_no_secret_key'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/devise-4.5.0/lib/devise/rails/routes.rb:228:in `devise_for'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/releases/20180817213621/config/routes.rb:2:in `block in <top (required)>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/routing/route_set.rb:410:in `draw'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/releases/20180817213621/config/routes.rb:1:in `<top (required)>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `each'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:40:in `load_paths'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:16:in `reload!'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:26:in `block in updater'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/di
+ DEBUG [677223a7] 	ffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/file_update_checker.rb:75:in `execute'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:27:in `updater'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/routes_reloader.rb:7:in `execute_if_updated'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `instance_exec'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `run'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:55:in `block in run_initializers'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:54:in `run_initializers'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:352:in `initialize!'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/releases/20180817213621/config/environment.rb:5:in `<top (required)>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:328:in `require_environment!'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:457:in `block in run_tasks_blocks'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/s
+ DEBUG [677223a7] 	hared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/task.rb:62:in `block (2 levels) in define'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/cli.rb:18:in `start'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/lib/bundler/friendly_errors.rb:124:in `with_friendly_errors'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/gems/bundler-1.16.3/exe/bundle:22:in `<top (required)>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:24:in `eval'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	/home/deploy/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:24:in `<main>'
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	Tasks: TOP => environment
+ DEBUG [677223a7] 	
+ DEBUG [677223a7] 	(See full trace by running task with --trace)
+ DEBUG [677223a7] 	

@@ -285,7 +285,7 @@ DEPENDENCIES
   loading_screen (~> 0.2.3)
   net-ssh
   paper_trail
-  pg (~> 0.21)
+  pg
   popper_js (~> 1.12.9)
   puma
   quiet_assets

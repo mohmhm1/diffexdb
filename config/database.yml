@@ -23,11 +23,7 @@ test:
   <<: *default
   database: 
 production:
-  <<: *default
-  host: localhost
   adapter: postgresql
-  encoding: utf8
-  database: prod
+  url: <%= ENV['POSTGRESQL_URL'] %> #This is the environment variable created by our Dokku command earlier
+  encoding: unicode
   pool: 5
-  username: postgres
-  password: a241986

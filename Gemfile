@@ -32,6 +32,8 @@ group :development do
     gem 'capistrano-rails',   require: false
     gem 'capistrano-bundler', require: false
     gem 'capistrano3-puma',   require: false
+end
+group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 gem 'bootstrap-sass'

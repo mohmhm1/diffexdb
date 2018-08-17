@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.0'
  gem 'elasticsearch-model'
  gem 'elasticsearch-rails'
  gem 'loading_screen', '~> 0.2.3'
-
+gem 'net-ssh'
 group :development, :test do
   gem 'byebug'
 end
@@ -33,12 +33,9 @@ gem 'capistrano-rails', '~> 1.1.1'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
   gem 'web-console', '~> 2.0'
   gem 'spring'
-end
 gem 'bootstrap-sass'
 gem 'high_voltage'
 gem 'simple_form'
-group :development do
-  
 
   gem 'better_errors'
   gem 'quiet_assets'

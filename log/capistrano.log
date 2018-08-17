@@ -5031,3 +5031,10 @@ Please ensure you restarted your application after installing Devise or setting 
 /home/deploy/.rbenv/versions/2.3.0/bin/bundle:23:in `<main>'
  DEBUG [66fc8ded] 	Tasks: TOP => environment
  DEBUG [66fc8ded] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-17 16:18:46 -0400 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e5aef9bf] Running [ -d ~/.rvm ] as deploy@142.93.115.149
+ DEBUG [e5aef9bf] Command: [ -d ~/.rvm ]
+ DEBUG [992ea37b] Running [ -d ~/.rvm ] on 142.93.12.142
+ DEBUG [992ea37b] Command: [ -d ~/.rvm ]

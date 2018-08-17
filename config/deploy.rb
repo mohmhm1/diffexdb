@@ -1,5 +1,5 @@
 # Change these
-server '142.93.12.142', port: 80, roles: [:web, :app, :db], primary: true
+server '142.93.204.216', port: 80, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com.com:mohmhm1/diffexdb.git'
 set :application,     'diffexdb'

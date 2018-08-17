@@ -107,7 +107,7 @@ def index
   end
 end
 end
-require 'rinruby'
+
 def runR
   if File.exist?('public/TN.html')
 File.delete('public/TN.html')

@@ -33,6 +33,7 @@ gem 'high_voltage'
   gem 'rails_layout'
   gem 'devise'
 gem 'pg'
+gem "non-stupid-digest-assets"
 group :development do
     gem 'capistrano',         require: false
     gem 'capistrano-rvm',     require: false

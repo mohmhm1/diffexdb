@@ -113,7 +113,7 @@ def runR
 File.delete('public/TN.html')
 end
   if File.exist?('app/assets/data.csv')
-  R.image_path = Rails.root.join("app", "assets","images", "a.png").to_s
+  #R.image_path = Rails.root.join("app", "assets","images", "a.png").to_s
   R.eval("library(data.table)")
   R.eval("mydata <- read.table('app/assets/data.csv',sep=',')")
   R.eval("dt <- as.data.table(mydata)")
@@ -129,8 +129,9 @@ end
   R.eval("Sys.setenv('plotly_api_key' = 'Ltj2TVLQJ85c88ZGw0pZ')")
   R.eval("p <- plot_ly(TU, y = TU$V2,type = 'box',name = 'Tumor', yaxis = list(type = 'log')) %>% add_trace(N,y = N$V2, name = 'Normal',yaxis = list(type = 'log')) %>% layout(title=sprintf('Expression Levels of %s \n P-Value  = %s ',names1,ttest$p.value))")
   #R.eval('api_create(p,filename = "r-docs-midwest-boxplots")')
-  R.eval('htmlwidgets::saveWidget(as_widget(p), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/TN.html")')
-  redirect_to('/TN.html')
+  #R.eval('htmlwidgets::saveWidget(as_widget(p), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/TN.html")')
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "/home/deploy/apps/diffexdb/current/app/assets/TN.html')
+  redirect_to('app/assets/data.csv')
   File.delete('app/assets/data.csv')
 else
   redirect_to(:back, notice: " Sorry. You are too quick for me! Something went wrong. Please try your request again")
@@ -142,7 +143,7 @@ File.delete('public/race.html')
 end
   if File.exist?('app/assets/data.csv')
 
-  R.image_path = Rails.root.join("app", "assets","images", "race.png").to_s
+  #R.image_path = Rails.root.join("app", "assets","images", "race.png").to_s
   
   R.eval("library(data.table)")
   R.eval("mydata <- read.table('app/assets/data.csv',sep=',')")

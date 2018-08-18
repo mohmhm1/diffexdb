@@ -49,6 +49,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  gem 'rails-web-console'
   #gem 'rails_12factor'
 end
 

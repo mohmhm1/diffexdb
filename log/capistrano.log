@@ -14072,3 +14072,24 @@ Tasks: TOP => environment
  DEBUG [552b8f44] 	Command restart sent success
  DEBUG [552b8f44] 	
   INFO [552b8f44] Finished in 0.961 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-08-18 03:04:08 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e5f7c126] Running [ -d ~/.rvm ] on 142.93.204.216
+ DEBUG [e5f7c126] Command: [ -d ~/.rvm ]
+ DEBUG [38aea650] Finished in 2.463 seconds with exit status 0 (successful).
+ DEBUG [94be77d6] Running ~/.rvm/bin/rvm version on 142.93.204.216
+ DEBUG [94be77d6] Command: ~/.rvm/bin/rvm version
+ DEBUG [a211817b] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [a211817b] 	
+ DEBUG [a211817b] Finished in 0.434 seconds with exit status 0 (successful).
+ DEBUG [a8e3d178] Running ~/.rvm/bin/rvm current on 142.93.204.216
+ DEBUG [a8e3d178] Command: ~/.rvm/bin/rvm current
+ DEBUG [c7bbe7e8] 	ruby-2.3.0
+ DEBUG [c7bbe7e8] 	
+ DEBUG [c7bbe7e8] Finished in 0.298 seconds with exit status 0 (successful).
+ DEBUG [f74606ce] Running ~/.rvm/bin/rvm default do ruby --version on 142.93.204.216
+ DEBUG [f74606ce] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [27a64077] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [27a64077] 	
+ DEBUG [27a64077] Finished in 0.488 seconds with exit status 0 (successful).

@@ -110,8 +110,9 @@ end
 require 'rinruby'
 def runR
   if File.exist?('public/TN.html')
-File.delete('public/TN.html')
+File.delete('app/public/TN.html')
 end
+
   if File.exist?('app/assets/data.csv')
   #R.image_path = Rails.root.join("app", "assets","images", "a.png").to_s
   R.eval("library(data.table)")
@@ -125,21 +126,23 @@ end
   #R.eval("boxplot(N$V2,TU$V2, main = sprintf('Expression Levels of %s P-value = %s ',names1,ttest$p.value),at = c(1,2), names = c('Normal', 'Tumor'), las = 2, col = c('green','red'),  log = 'y')")
   #R.eval("dev.off()")
   R.eval("library(plotly)")
-  R.eval("Sys.setenv('plotly_username' = 'mohmhm1')")
-  R.eval("Sys.setenv('plotly_api_key' = 'Ltj2TVLQJ85c88ZGw0pZ')")
+  #If you want to us plotly api, uncomment these two lines and provide credentials then uncomment line 133
+  #R.eval("Sys.setenv('plotly_username' = username)")
+  #R.eval("Sys.setenv('plotly_api_key' = apikey)")
   R.eval("p <- plot_ly(TU, y = TU$V2,type = 'box',name = 'Tumor', yaxis = list(type = 'log')) %>% add_trace(N,y = N$V2, name = 'Normal',yaxis = list(type = 'log')) %>% layout(title=sprintf('Expression Levels of %s \n P-Value  = %s ',names1,ttest$p.value))")
   #R.eval('api_create(p,filename = "r-docs-midwest-boxplots")')
-  #R.eval('htmlwidgets::saveWidget(as_widget(p), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/TN.html")')
-  R.eval('htmlwidgets::saveWidget(as_widget(p), "/home/deploy/apps/diffexdb/current/app/assets/TN.html')
-  redirect_to('app/assets/data.csv')
+  #R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html")')
+  R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html')
+  redirect_to('/TN.html')
   File.delete('app/assets/data.csv')
 else
   redirect_to(:back, notice: " Sorry. You are too quick for me! Something went wrong. Please try your request again")
 end
 end
 def runRrace
-  if File.exist?('public/race.html')
-File.delete('public/race.html')
+  if File.exist?('app/public/race.html')
+File.delete('app/public/race.html')
 end
   if File.exist?('app/assets/data.csv')
 
@@ -179,7 +182,8 @@ title=sprintf('Expression Levels of %s by race \n P-Value  = %s ',names1,pval),t
   #R.eval("Sys.setenv('plotly_username' = 'mohmhm1')")
   #R.eval("Sys.setenv('plotly_api_key' = 'Ltj2TVLQJ85c88ZGw0pZ')")
   #R.eval("p")
-R.eval('htmlwidgets::saveWidget(as_widget(p), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/race.html")')
+  R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "race.html")')
   redirect_to('/race.html')
   File.delete('app/assets/data.csv')
 else
@@ -190,8 +194,8 @@ end
   #send_file Rails.root.join("app", "assets", "images", "race.png"), type: "image/png", disposition: "inline"
 end
 def runRrace_file
-  if File.exist?('public/anova_race.csv')
-File.delete('public/anova_race.csv')
+  if File.exist?('app/public/anova_race.csv')
+File.delete('app/public/anova_race.csv')
 end
   if File.exist?('app/assets/data.csv')
   #R.image_path = Rails.root.join("app", "assets","images", "alive.png").to_s
@@ -214,9 +218,9 @@ else
 end
 end
 def runRkmeans_cluster
-#ckmeans for diffexdbi
-if File.exist?('public/kmeans_cluster.html')
-File.delete('public/kmeans_cluster.html')
+#ckmeans for diffexdb
+if File.exist?('app/public/kmeans_cluster.html')
+File.delete('app/public/kmeans_cluster.html')
 end
 if File.exist?('app/assets/data.csv')
 #first find optimal clusters
@@ -263,7 +267,7 @@ R.eval('a <- plot_ly(TU,y=TU,x=TU$V2, mode = "marker",type= "scatter",
             title = "Sample Number",
             titlefont = list(color = "rgb(2, 0, 1)")))')
 
-R.eval('htmlwidgets::saveWidget(as_widget(a), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/kmeans_cluster.html")')
+R.eval('htmlwidgets::saveWidget(as_widget(a), "kmeans_cluster.html")')
   redirect_to('/kmeans_cluster.html')
   File.delete('app/assets/data.csv')
 
@@ -276,7 +280,7 @@ end
 end
 
 def runRstatus
-  if File.exist?('public/status.html')
+  if File.exist?('app/public/status.html')
 File.delete('public/status.html')
 end
   if File.exist?('app/assets/data.csv')
@@ -312,7 +316,7 @@ title=sprintf('Expression Levels of %s \n P-Value  = %s ',names1,ttest$p.value),
             titlefont = list(color = 'rgb(2, 0, 1)')))")
 
   #R.eval("p")
-  R.eval('htmlwidgets::saveWidget(as_widget(p), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/status.html")')
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "status.html")')
   redirect_to('/status.html')
   File.delete('app/assets/data.csv')
 else
@@ -320,7 +324,7 @@ else
 end
 end
 def runRstage
-  if File.exist?('public/stage.html')
+  if File.exist?('app/public/stage.html')
 File.delete('public/stage.html')
 end
   if File.exist?('app/assets/data.csv')
@@ -358,7 +362,7 @@ end
             titlefont = list(color = 'rgb(2, 0, 1)')))")
 
   #R.eval("p")
-  R.eval('htmlwidgets::saveWidget(as_widget(p), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/stage.html")')
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "stage.html")')
   redirect_to('/stage.html')
   File.delete('app/assets/data.csv')
 else
@@ -366,7 +370,7 @@ else
 end
 end
 def runRstage_file
-  if File.exist?('public/anova_stage.csv')
+  if File.exist?('app/public/anova_stage.csv')
 File.delete('public/anova_stage.csv')
 end
   if File.exist?('app/assets/data.csv')
@@ -390,8 +394,8 @@ else
 end
 end
 def runRcoxph
-if File.exist?('public/coxph.html')
-File.delete('public/coxph.html')
+if File.exist?('app/public/coxph.html')
+File.delete('app/public/coxph.html')
 end
 if File.exist?('app/assets/data.csv')
 #R.eval("rm(list=ls())")
@@ -548,7 +552,7 @@ R.eval("names1 <- as.vector(dt$V3[1])")
 R.eval("log_rank <-survival::survdiff(Surv(TUfin$V11, TUfin$V12) ~ TUfin$V2, data=TUfin)")
 R.eval('z <-ggsurv1(cox_fit,  main = paste("Cox Hazards Regression for",names1)) +  theme_bw() + ggplot2::geom_text(aes(label = sprintf("log-rank test p-value: %0.2g",pchisq(log_rank$chisq, df = 1, lower.tail = F)),x = 2000, y = 0.9))')
 R.eval("o <-plotly::ggplotly(z)")
-R.eval('htmlwidgets::saveWidget(as_widget(o), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/coxph.html")')
+R.eval('htmlwidgets::saveWidget(as_widget(o), "coxph.html")')
   redirect_to('/coxph.html')
   File.delete('app/assets/data.csv')
 else
@@ -558,10 +562,10 @@ end
 
 def runRkaplansingle
   if File.exist?('public/kaplanmeier.html')
-File.delete('public/kaplanmeier.html')
+File.delete('app/public/kaplanmeier.html')
 end
 if File.exist?('public/KM_data.csv')
-File.delete('public/KM_data.csv')
+File.delete('app/public/KM_data.csv')
 end
 if File.exist?('app/assets/data.csv')
 R.eval("library(data.table)")
@@ -742,7 +746,7 @@ R.eval('tr <-plotly::ggplotly(p1)%>%
           margin = list(r = 20, t = 70, b = 60, l = 60, pad = 1),titlefont = list(color = "rgb(2, 0, 1)", size = 22))')
                           
 
-R.eval('htmlwidgets::saveWidget(as_widget(tr), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/kaplanmeier.html")')
+R.eval('htmlwidgets::saveWidget(as_widget(tr), "kaplanmeier.html")')
 R.eval('res <- summary(km)')
 R.eval('save.df <- as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv", "std.err", "lower", "upper")])')
 R.eval('write.csv(save.df, "public/KM_data.csv")')
@@ -755,10 +759,10 @@ end
 end
 def runRkaplansingle_file
   if File.exist?('public/kaplanmeier.html')
-File.delete('public/kaplanmeier.html')
+File.delete('app/public/kaplanmeier.html')
 end
 if File.exist?('public/KM_data.csv')
-File.delete('public/KM_data.csv')
+File.delete('app/public/KM_data.csv')
 end
 if File.exist?('app/assets/data.csv')
 R.eval("library(data.table)")
@@ -967,7 +971,7 @@ R.eval('z <- subplot(a,tr)%>%
             tickfont = list(color = "rgb(2, 0, 1)"),
             title = "Survival",
             titlefont = list(color = "rgb(2, 0, 1)")),showlegend=FALSE)')
-R.eval('htmlwidgets::saveWidget(as_widget(z), "//Users/ahmed.mahmoud/Desktop/Desktop/diffexdb_test/public/kaplanmeier.html")')
+R.eval('htmlwidgets::saveWidget(as_widget(z), "kaplanmeier.html")')
 R.eval('res <- summary(km)')
 R.eval('save.df <- as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv", "std.err", "lower", "upper")])')
 R.eval('write.csv(save.df, "public/KM_data.csv")')

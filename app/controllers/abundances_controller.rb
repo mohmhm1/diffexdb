@@ -133,7 +133,7 @@ end
   #R.eval('api_create(p,filename = "r-docs-midwest-boxplots")')
   #R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html")')
   R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
-  R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html')
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html")')
   redirect_to('/TN.html')
   File.delete('app/assets/data.csv')
 else

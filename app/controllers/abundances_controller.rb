@@ -977,7 +977,7 @@ R.eval('z <- subplot(a,tr)%>%
 R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
 R.eval('res <- summary(km)')
 R.eval('save.df <- as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv", "std.err", "lower", "upper")])')
-R.eval('write.csv(save.df, "public/KM_data.csv")')
+R.eval('write.csv(save.df, "KM_data.csv")')
 send_file("public/KM_data.csv", :disposition => 'attachment')
   File.delete('app/assets/data.csv')
 else

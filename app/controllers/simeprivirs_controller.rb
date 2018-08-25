@@ -1,3 +1,0 @@
-class SimeprivirsController < ApplicationController
-  
-end

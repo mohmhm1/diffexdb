@@ -17,18 +17,12 @@ Rails.application.routes.draw do
     collection {post :import}
   end
 
-  resources :patients
-  resources :simeprivirs
-  resources :variants
-  resources :hcvdrugs
   resources :visitors
   root to: 'welcome#index'
-  resources :ns5_a_description
-  resources :simeprivirs
+  resources :matrix_description
   resources :paritaprevir
-  resources :ns3_description
-  resources :boceprivir
-  resources :telaprevir
+  resources :pipeline_description
+
   get 'export3', to: 'sleuths#export', as: :sleuths_export
   get 'export2', to: 'splices#export', as: :splices_export
   get 'export', to: 'samples#export', as: :samples_export

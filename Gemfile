@@ -32,7 +32,6 @@ gem 'high_voltage'
   gem 'quiet_assets'
   gem 'rails_layout'
   gem 'devise'
- 
 gem 'pg'
 gem "non-stupid-digest-assets"
 group :development do

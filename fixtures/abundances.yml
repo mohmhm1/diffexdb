@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bcr_patient_barcode: MyString
+  target_id: MyString
+  length: 1
+  eff_length: 1
+  est_counts: 1
+  tpm: 1
+
+two:
+  bcr_patient_barcode: MyString
+  target_id: MyString
+  length: 1
+  eff_length: 1
+  est_counts: 1
+  tpm: 1

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  target_id: MyString
+  test_stat: 9.99
+  pval: 9.99
+  qval: 9.99
+  rsssigma_sq: 9.99
+  tech_var: 9.99
+  mean_obs: 9.99
+  var_obs: 9.99
+  sigma_sq_pmax: 9.99
+  smooth_sigma_sq: 9.99
+  final_sigma_sq: 9.99
+  degrees_free: 1
+  ens_gene: MyString
+  ext_gene: MyString
+
+two:
+  target_id: MyString
+  test_stat: 9.99
+  pval: 9.99
+  qval: 9.99
+  rsssigma_sq: 9.99
+  tech_var: 9.99
+  mean_obs: 9.99
+  var_obs: 9.99
+  sigma_sq_pmax: 9.99
+  smooth_sigma_sq: 9.99
+  final_sigma_sq: 9.99
+  degrees_free: 1
+  ens_gene: MyString
+  ext_gene: MyString

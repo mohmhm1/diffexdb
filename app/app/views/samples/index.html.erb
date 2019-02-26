@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  /* Icon when the collapsible content is shown */
+  .btn:after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    float: right;
+    margin-left: 15px;
+  }
+  /* Icon when the collapsible content is hidden */
+  .btn.collapsed:after {
+    content: "\e080";
+  }
+</style>
+</head>
+<body>
+<div>
+
+
+<div type=container >
+  <h1>Listing Samples</h1>
+<%= search_form_for @search do |f| %>
+<%= f.label "Quick Search" %>
+    <%= f.search_field :sample_id_cont_any, :Placeholder => ' One Keyword Query' %>
+<%= f.submit "Search" %>
+ <%end%>
+ <th> Download:
+  <%= link_to "Excel/CSV", samples_export_path(params.merge(format: "csv")), download: 'Query.csv' %></th>
+  <th> <%= form_tag import_samples_path, multipart: true do %>
+    <%= file_field_tag :file, required: true%>
+    <%= submit_tag "Import CSV" %></th>
+    <%end%>
+  </div>
+  <center><div type=container >
+<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#demo1">Visualize</button>
+<div id="demo1" class="collapse"> 
+<div style="overflow: auto;background-color: #F5F5F5; border-radius:30px">
+  <table class="table">
+  <%= pie_chart @samples.group(:race).count ,title: "Samples by Race"%> 
+  <%= pie_chart @samples.group(:gender).count ,title: "Samples by Gender"%> 
+  <%= pie_chart @samples.group(:ajcc_pathologic_tumor_stage).count ,title:"Samples by Stage"%> 
+
+</table>
+</div>
+</div></div>
+<div type=container >
+<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#demo">Advanced Search</button>
+<div id="demo" class="collapse">   
+<%= search_form_for @search do |f| %>
+<table class="table table-default table-condensed">
+   <th> <%= f.label :name_cont, "TCGA_ID" %>
+    <%= f.search_field :sample_id_cont %> </th>
+    <th><%= f.label :name_eq, "Gender" %>
+    <%= f.select :gender_eq, options_for_select([["ALL", ""],
+        ['MALE'],
+        ['FEMALE']]) %></th>
+    <th><%= f.label :name_cont, "Race" %>
+    <%= f.select :race_cont, options_for_select([["ALL", ""],
+        ['WHITE'],['BLACK'],
+        ['ASIAN'],['NOT REPORTED','NA']]) %></th>
+    <th><%= f.label :name_cont, "ethnicity" %>
+    <%= f.search_field :ethnicity_cont %></th>
+    <th><%= f.label :name_cont, "Dx Year" %>
+    <%= f.search_field :initial_pathologic_dx_year_cont %></th>
+    <%= f.search_field :ajcc_pathologic_tumor_stage_cont %></th>
+     <th><%= f.label :name_cont, "Tumor Stage" %>
+    <%= f.select :ajcc_pathologic_tumor_stage_eq, options_for_select([["ALL", ""],
+        ['Stage_I','Stage_I'],['Stage_II',['Stage_II','Stage_IIA', 'Stage_IIAB']],
+        ['Stage_III','Stage_III','Stage_IIIA','Stage_IIIB','Stage_IIIC'],['Stage_IV','Stage_IV','Stage_IVA','Stage_IVB']]) %></th>
+<div class="actions"><%= f.submit "Search" %></div>
+<table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'file_name' %>
+<%= f.search_field :file_name_cont %> </th>
+<th> <%= f.label :name_cont, 'folder_name_from_manifest' %>
+<%= f.search_field :folder_name_from_manifest_cont %> </th>
+<th> <%= f.label :name_cont, 'sample_id' %>
+<%= f.search_field :sample_id_cont %> </th>
+<th> <%= f.label :name_cont, 'form_completion_date' %>
+<%= f.search_field :form_completion_date_cont %> </th>
+<th> <%= f.label :name_cont, 'histologic_diagnosis' %>
+<%= f.search_field :histologic_diagnosis_cont %> </th>
+<th> <%= f.label :name_cont, 'prospective_collection' %>
+<%= f.search_field :prospective_collection_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'birth_days_to' %>
+<%= f.search_field :birth_days_to_cont %> </th>
+<th> <%= f.label :name_cont, 'history_other_malignancy' %>
+<%= f.search_field :history_other_malignancy_cont %> </th>
+<th> <%= f.label :name_cont, 'history_neoadjuvant_treatment' %>
+<%= f.search_field :history_neoadjuvant_treatment_cont %> </th>
+<th> <%= f.label :name_cont, 'ajcc_staging_edition' %>
+<%= f.search_field :ajcc_staging_edition_cont %> </th>
+<th> <%= f.label :name_cont, 'ajcc_tumor_pathologic_pt' %>
+<%= f.search_field :ajcc_tumor_pathologic_pt_cont %> </th>
+<th> <%= f.label :name_cont, 'ajcc_nodes_pathologic_pn' %>
+<%= f.search_field :ajcc_nodes_pathologic_pn_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'ajcc_metastasis_pathologic_pm' %>
+<%= f.search_field :ajcc_metastasis_pathologic_pm_cont %> </th>
+<th> <%= f.label :name_cont, 'residual_tumor' %>
+<%= f.search_field :residual_tumor_cont %> </th>
+<th> <%= f.label :name_cont, 'lymph_nodes_examined' %>
+<%= f.search_field :lymph_nodes_examined_cont %> </th>
+<th> <%= f.label :name_cont, 'lymph_nodes_examined_count' %>
+<%= f.search_field :lymph_nodes_examined_count_cont %> </th>
+<th> <%= f.label :name_cont, 'lymph_nodes_examined_he_count' %>
+<%= f.search_field :lymph_nodes_examined_he_count_cont %> </th>
+<th> <%= f.label :name_cont, 'lymph_nodes_examined_ihc_count' %>
+<%= f.search_field :lymph_nodes_examined_ihc_count_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'vital_status' %>
+<%= f.search_field :vital_status_cont %> </th>
+<th> <%= f.label :name_cont, 'last_contact_days_to' %>
+<%= f.search_field :last_contact_days_to_cont %> </th>
+<th> <%= f.label :name_cont, 'death_days_to' %>
+<%= f.search_field :death_days_to_cont %> </th>
+<th> <%= f.label :name_cont, 'tumor_status' %>
+<%= f.search_field :tumor_status_cont %> </th>
+<th> <%= f.label :name_cont, 'cea_level_pretreatment' %>
+<%= f.search_field :cea_level_pretreatment_cont %> </th>
+<th> <%= f.label :name_cont, 'specimen_non_node_tumor_deposits' %>
+<%= f.search_field :specimen_non_node_tumor_deposits_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'circumferential_resection_margin_crm' %>
+<%= f.search_field :circumferential_resection_margin_crm_cont %> </th>
+<th> <%= f.label :name_cont, 'vascular_invasion_indicator' %>
+<%= f.search_field :vascular_invasion_indicator_cont %> </th>
+<th> <%= f.label :name_cont, 'lymphovascular_invasion_indicator' %>
+<%= f.search_field :lymphovascular_invasion_indicator_cont %> </th>
+<th> <%= f.label :name_cont, 'perineural_invasion' %>
+<%= f.search_field :perineural_invasion_cont %> </th>
+<th> <%= f.label :name_cont, 'microsatellite_instability' %>
+<%= f.search_field :microsatellite_instability_cont %> </th>
+<th> <%= f.label :name_cont, 'loci_tested_count' %>
+<%= f.search_field :loci_tested_count_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'loci_abnormal_count' %>
+<%= f.search_field :loci_abnormal_count_cont %> </th>
+<th> <%= f.label :name_cont, 'mismatch_rep_proteins_tested_by_ihc' %>
+<%= f.search_field :mismatch_rep_proteins_tested_by_ihc_cont %> </th>
+<th> <%= f.label :name_cont, 'mismatch_rep_proteins_loss_ihc' %>
+<%= f.search_field :mismatch_rep_proteins_loss_ihc_cont %> </th>
+<th> <%= f.label :name_cont, 'kras_gene_analysis_indicator' %>
+<%= f.search_field :kras_gene_analysis_indicator_cont %> </th>
+<th> <%= f.label :name_cont, 'kras_mutation_found' %>
+<%= f.search_field :kras_mutation_found_cont %> </th>
+<th> <%= f.label :name_cont, 'kras_mutation_codon' %>
+<%= f.search_field :kras_mutation_codon_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'braf_gene_analysis_indicator' %>
+<%= f.search_field :braf_gene_analysis_indicator_cont %> </th>
+<th> <%= f.label :name_cont, 'braf_gene_analysis_result' %>
+<%= f.search_field :braf_gene_analysis_result_cont %> </th>
+<th> <%= f.label :name_cont, 'history_colon_polyps' %>
+<%= f.search_field :history_colon_polyps_cont %> </th>
+<th> <%= f.label :name_cont, 'colon_polyps_at_procurement_indicator' %>
+<%= f.search_field :colon_polyps_at_procurement_indicator_cont %> </th>
+<th> <%= f.label :name_cont, 'weight_kg_at_diagnosis' %>
+<%= f.search_field :weight_kg_at_diagnosis_cont %> </th>
+<th> <%= f.label :name_cont, 'height_cm_at_diagnosis' %>
+<%= f.search_field :height_cm_at_diagnosis_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'family_history_colorectal_cancer' %>
+<%= f.search_field :family_history_colorectal_cancer_cont %> </th>
+<th> <%= f.label :name_cont, 'radiation_treatment_adjuvant' %>
+<%= f.search_field :radiation_treatment_adjuvant_cont %> </th>
+<th> <%= f.label :name_cont, 'pharmaceutical_tx_adjuvant' %>
+<%= f.search_field :pharmaceutical_tx_adjuvant_cont %> </th>
+<th> <%= f.label :name_cont, 'treatment_outcome_first_course' %>
+<%= f.search_field :treatment_outcome_first_course_cont %> </th>
+<th> <%= f.label :name_cont, 'new_tumor_event_dx_indicator' %>
+<%= f.search_field :new_tumor_event_dx_indicator_cont %> </th>
+<th> <%= f.label :name_cont, 'age_at_initial_pathologic_diagnosis' %>
+<%= f.search_field :age_at_initial_pathologic_diagnosis_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'anatomic_neoplasm_subdivision' %>
+<%= f.search_field :anatomic_neoplasm_subdivision_cont %> </th>
+<th> <%= f.label :name_cont, 'clinical_M' %>
+<%= f.search_field :clinical_M_cont %> </th>
+<th> <%= f.label :name_cont, 'clinical_N' %>
+<%= f.search_field :clinical_N_cont %> </th>
+<th> <%= f.label :name_cont, 'clinical_T' %>
+<%= f.search_field :clinical_T_cont %> </th>
+<th> <%= f.label :name_cont, 'clinical_stage' %>
+<%= f.search_field :clinical_stage_cont %> </th>
+<th> <%= f.label :name_cont, 'days_to_initial_pathologic_diagnosis' %>
+<%= f.search_field :days_to_initial_pathologic_diagnosis_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'days_to_patient_progression_free' %>
+<%= f.search_field :days_to_patient_progression_free_cont %> </th>
+<th> <%= f.label :name_cont, 'days_to_tumor_progression' %>
+<%= f.search_field :days_to_tumor_progression_cont %> </th>
+<th> <%= f.label :name_cont, 'disease_code' %>
+<%= f.search_field :disease_code_cont %> </th>
+<th> <%= f.label :name_cont, 'eastern_cancer_oncology_group' %>
+<%= f.search_field :eastern_cancer_oncology_group_cont %> </th>
+<th> <%= f.label :name_cont, 'extranodal_involvement' %>
+<%= f.search_field :extranodal_involvement_cont %> </th>
+<th> <%= f.label :name_cont, 'icd_10' %>
+<%= f.search_field :icd_10_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'icd_o_3_histology' %>
+<%= f.search_field :icd_o_3_histology_cont %> </th>
+<th> <%= f.label :name_cont, 'icd_o_3_site' %>
+<%= f.search_field :icd_o_3_site_cont %> </th>
+<th> <%= f.label :name_cont, 'informed_consent_verified' %>
+<%= f.search_field :informed_consent_verified_cont %> </th>
+<th> <%= f.label :name_cont, 'initial_pathologic_diagnosis_method' %>
+<%= f.search_field :initial_pathologic_diagnosis_method_cont %> </th>
+<th> <%= f.label :name_cont, 'karnofsky_performance_score' %>
+<%= f.search_field :karnofsky_performance_score_cont %> </th>
+<th> <%= f.label :name_cont, 'number_pack_years_smoked' %>
+<%= f.search_field :number_pack_years_smoked_cont %> </th>
+</table>
+  <table class="table table-default table-condensed">
+<th> <%= f.label :name_cont, 'patient_id' %>
+<%= f.search_field :patient_id_cont %> </th>
+<th> <%= f.label :name_cont, 'project_code' %>
+<%= f.search_field :project_code_cont %> </th>
+<th> <%= f.label :name_cont, 'stage_other' %>
+<%= f.search_field :stage_other_cont %> </th>
+<th> <%= f.label :name_cont, 'stopped_smoking_year' %>
+<%= f.search_field :stopped_smoking_year_cont %> </th>
+<th> <%= f.label :name_cont, 'tissue_source_site' %>
+<%= f.search_field :tissue_source_site_cont %> </th>
+<th> <%= f.label :name_cont, 'tobacco_smoking_history' %>
+<%= f.search_field :tobacco_smoking_history_cont %> </th>
+<th> <%= f.label :name_cont, 'tumor_tissue_site' %>
+<%= f.search_field :tumor_tissue_site_cont %> </th>
+</table>
+  <% end %>
+</table>
+</div></div></div></div></center></body>
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <%#<th>Bcr patient uuid</th>
+      <%#<th>File name</th>
+      <%#<th>Folder name from manifest</th>%>
+     <th> <%= sort_link @search, :sample_id,"TCGA_ID" %> </th><%#<th>Bcr patient barcode</th>
+      <%#<th>Form completion date</th>
+      <%#<th>Histologic diagnosis</th>
+      <%#<th>Prospective collection</th>
+      <%#<th>Retrospective collection</th>%>
+     <th> <%= sort_link @search, :gender,"Gender" %> </th>
+      <%#<th>Birth days to</th>%>
+     <th> <%= sort_link @search, :race,"Race" %> </th>
+     <th> <%= sort_link @search, :ethnicity,"ethnicity" %> </th>
+      <%#<th>History other malignancy</th>
+      <%#<th>History neoadjuvant treatment</th>%>
+     <th> <%= sort_link @search, :initial_pathologic_dx_year,"initial pathologic dx year" %> </th>
+     <%#<th> <%= sort_link @search, :ajcc_staging_edition,"ajcc staging edition" %>
+     <th> <%= sort_link @search, :ajcc_staging_edition,"ajcc staging edition" %> </th>
+     <th> <%= sort_link @search, :ajcc_nodes_pathologic_pn,"ajcc_nodes pathologic pn" %> </th>
+      <th> <%= sort_link @search, :ajcc_metastasis_pathologic_pm,"ajcc metastasis pathologic pm" %> </th>
+      <th> <%= sort_link @search, :ajcc_pathologic_tumor_stage,"ajcc pathologic tumor stage" %> </th><
+      <th><%= sort_link @search,:vital_status, "status"%></th>
+      <%#<th>Residual tumor</th>
+      <%#<th>Lymph nodes examined</th>
+      <%#<th>Lymph nodes examined count</th>
+      <%#<th>Lymph nodes examined he count</th>
+      <%#<th>Lymph nodes examined ihc count</th>
+      
+      <%#<th>Last contact days to</th>
+      <%#<th>Death days to</th>
+      <%#<th>Tumor status</th>
+      <%#<th>Cea level pretreatment</th>
+      <%#<th>Specimen non node tumor deposits</th>
+      <%#<th>Circumferential resection margin crm</th>
+      <%#<th>Vascular invasion indicator</th>
+      <%#<th>Lymphovascular invasion indicator</th>
+      <%#<th>Perineural invasion</th>
+      <%#<th>Microsatellite instability</th>
+      <%#<th>Loci tested count</th>
+      <%#<th>Loci abnormal count</th>
+      <%#<th>Mismatch rep proteins tested by ihc</th>
+      <%#<th>Mismatch rep proteins loss ihc</th>
+      <%#<th>Kras gene analysis indicator</th>
+      <%#<th>Kras mutation found</th>
+      <%#<th>Kras mutation codon</th>
+      <%#<th>Braf gene analysis indicator</th>
+      <%#<th>Braf gene analysis result</th>
+      <%#<th>History other malignancy</th>
+      <%#<th>History colon polyps</th>
+      <%#<th>Colon polyps at procurement indicator</th>
+      <%#<th>Weight kg at diagnosis</th>
+      <%#<th>Height cm at diagnosis</th>
+      <%#<th>Family history colorectal cancer</th>
+      <%#<th>Radiation treatment adjuvant</th>
+      <%#<th>Pharmaceutical tx adjuvant</th>
+      <%#<th>Treatment outcome first course</th>
+      <%#<th>New tumor event dx indicator</th>
+      <%#<th>Age at initial pathologic diagnosis</th>
+      <%#<th>Anatomic neoplasm subdivision</th>
+      <%#<th>Clinical m</th>
+      <%#<th>Clinical n</th>
+      <%#<th>Clinical t</th>
+      <%#<th>Clinical stage</th>
+      <%#<th>Days to initial pathologic diagnosis</th>
+      <%#<th>Days to patient progression free</th>
+      <%#<th>Days to tumor progression</th>
+      <%#<th>Disease code</th>
+      <%#<th>Eastern cancer oncology group</th>
+      <%#<th>Extranodal involvement</th>
+      <%#<th>Icd 10</th>
+      <%#<th>Icd o 3 histology</th>
+      <%#<th>Icd o 3 site</th>
+      <%#<th>Informed consent verified</th>
+      <%#<th>Initial pathologic diagnosis method</th>
+      <%#<th>Karnofsky performance score</th>
+      <%#<th>Number pack years smoked</th>
+      <%#<th>Patient</th>
+      <%#<th>Project code</th>
+      <%#<th>Stage other</th>
+      <%#<th>Stopped smoking year</th>
+      <%#<th>Tissue source site</th>
+      <%#<th>Tobacco smoking history</th>
+      <%#<th>Tumor tissue site</th>
+      <%#<th>Year of tobacco smoking onset</th>%>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @samples.each do |sample| %>
+      <tr>
+        <%#<td><%= sample.file_name <td>%>
+        <%#= sample.folder_name_from_manifes<td></td>%>
+        <td><%= sample.sample_id %> </td>
+        <%#<td><%= sample.form_completion_date %>
+        <%#<td><%= sample.histologic_diagnosis %>
+        <%#<td><%= sample.prospective_collection %>
+        <%#<td><%= sample.retrospective_collection %>
+        <td><%= sample.gender %></td>
+        <%#<td><%= sample.birth_days_to %>
+        <td><%= sample.race %></td>
+        <td><%= sample.ethnicity %></td>
+        <%#<td><%= sample.history_other_malignancy %>
+        <%#<td><%= sample.history_neoadjuvant_treatment %>
+        <td><%= sample.initial_pathologic_dx_year %></td>
+        <%#<td><%= sample.ajcc_staging_edition %>
+        <td><%= sample.ajcc_tumor_pathologic_pt %></td>
+        <td><%= sample.ajcc_nodes_pathologic_pn %></td>
+        <td><%= sample.ajcc_metastasis_pathologic_pm %></td>
+        <td><%= sample.ajcc_pathologic_tumor_stage %></td>
+        <%#<td><%= sample.residual_tumor %>
+        <%#<td><%= sample.lymph_nodes_examined %>
+        <%#<td><%= sample.lymph_nodes_examined_count %>
+        <%#<td><%= sample.lymph_nodes_examined_he_count %>
+        <%#<td><%= sample.lymph_nodes_examined_ihc_count %>
+        <td><%= sample.vital_status %></td>
+        <%#<td><%= sample.last_contact_days_to %>
+        <%#<td><%= sample.death_days_to %>
+        <%#<td><%= sample.tumor_status %>
+        <%#<td><%= sample.cea_level_pretreatment %>
+        <%#<td><%= sample.specimen_non_node_tumor_deposits %>
+        <%#<td><%= sample.circumferential_resection_margin_crm %>
+        <%#<td><%= sample.vascular_invasion_indicator %>
+        <%#<td><%= sample.lymphovascular_invasion_indicator %>
+        <%#<td><%= sample.perineural_invasion %>
+        <%#<td><%= sample.microsatellite_instability %>
+        <%#<td><%= sample.loci_tested_count %>
+        <%#<td><%= sample.loci_abnormal_count %>
+        <%#<td><%= sample.mismatch_rep_proteins_tested_by_ihc %>
+        <%#<td><%= sample.mismatch_rep_proteins_loss_ihc %>
+        <%#<td><%= sample.kras_gene_analysis_indicator %>
+        <%#<td><%= sample.kras_mutation_found %>
+        <%#<td><%= sample.kras_mutation_codon %>
+        <%#<td><%= sample.braf_gene_analysis_indicator %>
+        <%#<td><%= sample.braf_gene_analysis_result %>
+        <%#<td><%= sample.history_other_malignancy %>
+        <%#<td><%= sample.history_colon_polyps %>
+        <%#<td><%= sample.colon_polyps_at_procurement_indicator %>
+        <%#<td><%= sample.weight_kg_at_diagnosis %>
+        <%#<td><%= sample.height_cm_at_diagnosis %>
+        <%#<td><%= sample.family_history_colorectal_cancer %>
+        <%#<td><%= sample.radiation_treatment_adjuvant %>
+        <%#<td><%= sample.pharmaceutical_tx_adjuvant %>
+        <%#<td><%= sample.treatment_outcome_first_course %>
+        <%#<td><%= sample.new_tumor_event_dx_indicator %>
+        <%#<td><%= sample.age_at_initial_pathologic_diagnosis %>
+        <%#<td><%= sample.anatomic_neoplasm_subdivision %>
+        <%#<td><%= sample.clinical_M %>
+        <%#<td><%= sample.clinical_N %>
+        <%#<td><%= sample.clinical_T %>
+        <%#<td><%= sample.clinical_stage %>
+        <%#<td><%= sample.days_to_initial_pathologic_diagnosis %>
+        <%#<td><%= sample.days_to_patient_progression_free %>
+        <%#<td><%= sample.days_to_tumor_progression %>
+        <%#<td><%= sample.disease_code %>
+        <%#<td><%= sample.eastern_cancer_oncology_group %>
+        <%#<td><%= sample.extranodal_involvement %>
+        <%#<td><%= sample.icd_10 %>
+        <%#<td><%= sample.icd_o_3_histology %>
+        <%#<td><%= sample.icd_o_3_site %>
+        <%#<td><%= sample.informed_consent_verified %>
+        <%#<td><%= sample.initial_pathologic_diagnosis_method %>
+        <%#<td><%= sample.karnofsky_performance_score %>
+        <%#<td><%= sample.number_pack_years_smoked %>
+        <%#<td><%= sample.patient_id %>
+        <%#<td><%= sample.project_code %>
+        <%#<td><%= sample.stage_other %>
+        <%#<td><%= sample.stopped_smoking_year %>
+        <%#<td><%= sample.tissue_source_site %>
+        <%#<td><%= sample.tobacco_smoking_history %>
+        <%#<td><%= sample.tumor_tissue_site %>
+        <%#<td><%= sample.year_of_tobacco_smoking_onset %>
+        <td><%= link_to 'Show', sample %></td>
+        <td><%= link_to 'Edit', edit_sample_path(sample) %></td>
+        <td><%= link_to 'Destroy', sample, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+
+<%= link_to 'New Sample', new_sample_path %>
+</html>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+
   resources :transplices
   resources :transplices do
     collection {post :import}
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :matrix_description
   resources :paritaprevir
   resources :pipeline_description
-
+  get 'export4', to: 'transplices#export', as: :transplices_export
   get 'export3', to: 'sleuths#export', as: :sleuths_export
   get 'export2', to: 'splices#export', as: :splices_export
   get 'export', to: 'samples#export', as: :samples_export

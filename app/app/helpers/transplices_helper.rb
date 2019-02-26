@@ -1,2 +1,0 @@
-module TransplicesHelper
-end

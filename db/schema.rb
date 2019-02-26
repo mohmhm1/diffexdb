@@ -30,36 +30,9 @@ ActiveRecord::Schema.define(version: 20180809212425) do
   end
 
   add_index "abundances", ["created_at"], name: "index_abundances_on_created_at", using: :btree
-  add_index "abundances", ["eff_length"], name: "index_abundances_on_eff_length", using: :btree
-  add_index "abundances", ["est_counts"], name: "index_abundances_on_est_counts", using: :btree
   add_index "abundances", ["flag"], name: "index_abundances_on_flag", using: :btree
-  add_index "abundances", ["length"], name: "index_abundances_on_length", using: :btree
   add_index "abundances", ["notes"], name: "index_abundances_on_notes", using: :btree
-  add_index "abundances", ["sample_id"], name: "index_abundances_on_sample_id", using: :btree
-  add_index "abundances", ["target_id"], name: "index_abundances_on_target_id", using: :btree
-  add_index "abundances", ["tpm"], name: "index_abundances_on_tpm", using: :btree
   add_index "abundances", ["updated_at"], name: "index_abundances_on_updated_at", using: :btree
-
-  create_table "hcvdrugs", force: :cascade do |t|
-    t.string   "name"
-    t.string   "region"
-    t.string   "variant"
-    t.text     "information"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "patients", force: :cascade do |t|
-    t.string   "FirstName"
-    t.string   "LastName"
-    t.date     "DOB"
-    t.string   "Genotype"
-    t.string   "Mutations"
-    t.string   "Treatment"
-    t.string   "Physician"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "samples", force: :cascade do |t|
     t.string   "bcr_patient_uuid"
@@ -152,11 +125,6 @@ ActiveRecord::Schema.define(version: 20180809212425) do
 
   add_index "samples", ["sample_id"], name: "index_samples_on_sample_id", using: :btree
 
-  create_table "simeprivirs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sleuths", force: :cascade do |t|
     t.string   "target_id"
     t.decimal  "test_stat"
@@ -233,15 +201,6 @@ ActiveRecord::Schema.define(version: 20180809212425) do
   add_index "users", ["approved"], name: "index_users_on_approved", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  create_table "variants", force: :cascade do |t|
-    t.string   "AAchange"
-    t.string   "genotype"
-    t.string   "drugrelation"
-    t.text     "information"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
 
   create_table "version_associations", force: :cascade do |t|
     t.integer "version_id"

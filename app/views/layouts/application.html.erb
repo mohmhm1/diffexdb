@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head> 
-<% if user_signed_in? %>
+
 <% if action_name == "show" %>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -55,22 +55,12 @@ window.addEventListener('DOMContentLoaded', function(e) {
        <li><a href="/splices?utf8=✓&q%5Bsample_id_eq%5D=TCGA-F4-6704&q%5Bensembl_eq%5D=ENSG00000000003&commit=Search">Event Level PSI analyses</a></li> 
        <li><a href="/transplices?utf8=✓&q%5Bsample_id_eq%5D=TCGA-F4-6704&q%5Bgene_eq%5D=ENSG00000133703&commit=Search"data-no-turbolink="true">Transcript Level PSI Analyses</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-           <div><font color="white"> Welcome, <%= current_user.email %></font></div>
-           <%= link_to "Log off", destroy_user_session_path, method: :delete %></font>
+    
            
   </div>
 </nav>
 <%= yield %>
-<% end %>
-<% else %>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" <a href="/users/sign_in">DiffExDB</a>
-      </div></div></nav>
      
-<%= yield %>
 <% end %>
 
 

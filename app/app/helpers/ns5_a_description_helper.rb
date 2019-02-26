@@ -1,0 +1,2 @@
+module Ns5ADescriptionHelper
+end

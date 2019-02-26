@@ -132,8 +132,8 @@ end
   R.eval("p <- plot_ly(TU, y = TU$V2,type = 'box',name = 'Tumor', yaxis = list(type = 'log')) %>% add_trace(N,y = N$V2, name = 'Normal',yaxis = list(type = 'log')) %>% layout(title=sprintf('Expression Levels of %s \n P-Value  = %s ',names1,ttest$p.value))")
   #R.eval('api_create(p,filename = "r-docs-midwest-boxplots")')
   #R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html")')
-  R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
-  R.eval('htmlwidgets::saveWidget(as_widget(p), "TN.html")')
+  #R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
+  R.eval('htmlwidgets::saveWidget(as_widget(p), "public/TN.html")')
   redirect_to('/TN.html')
   File.delete('app/assets/data.csv')
 else
@@ -563,11 +563,11 @@ end
 end
 
 def runRkaplansingle
-  if File.exist?('public/kaplanmeier.html')
-File.delete('app/public/kaplanmeier.html')
-end
+#if File.exist?('app/public/kaplanmeier.html')
+#File.delete('app/public/kaplanmeier.html')
+#end
 if File.exist?('public/KM_data.csv')
-File.delete('app/public/KM_data.csv')
+File.delete('public/KM_data.csv')
 end
 if File.exist?('app/assets/data.csv')
 R.eval("library(data.table)")
@@ -746,14 +746,23 @@ R.eval('p1 <-ggsurv1(km, main =  paste("Kmeans Clustering & Kaplan Meier Curve f
 R.eval('tr <-plotly::ggplotly(p1)%>%
    layout(hovermode = "closest",
           margin = list(r = 20, t = 70, b = 60, l = 60, pad = 1),titlefont = list(color = "rgb(2, 0, 1)", size = 22))')
-                          
-R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
-R.eval('htmlwidgets::saveWidget(as_widget(tr), "kaplanmeier.html")')
-R.eval('res <- summary(km)')
-R.eval('save.df <- as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv", "std.err", "lower", "upper")])')
-R.eval('write.csv(save.df, "public/KM_data.csv")')
-#send_file("public/KM_data.csv", :disposition => 'attachment')
-  redirect_to('/kaplanmeier.html',:target => "blank")
+ R.eval("saveWidgetFix <- function (widget,file,...) {
+  ## A wrapper to saveWidget which compensates for arguable BUG in
+  ## saveWidget which requires `file` to be in current working
+  ## directory.
+  wd<-getwd()
+  on.exit(setwd(wd))
+  outDir<-dirname(file)
+  file<-basename(file)
+  setwd(outDir);
+  saveWidget(widget,file=file,...)
+}")                         
+#R.eval("setwd('/home/deploy/apps/diffexdb/current/public')")
+R.eval('htmlwidgets::saveWidget(as_widget(tr), "/km.html")')
+#R.eval('res <- summary(km)')
+#R.eval('save.df <- as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv", "std.err", "lower", "upper")])')
+R.eval('htmlwidgets::saveWidget(as_widget(tr), "km.html")')
+  redirect_to('/km.html')
   File.delete('app/assets/data.csv')
 else
   redirect_to(:back, notice: " Sorry. You are too quick for me! Something went wrong. Please try your request again")

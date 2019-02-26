@@ -1,0 +1,150 @@
+<body>
+
+<p id="notice"><%= notice %></p> 
+<div class="container">
+<div class="container">
+<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#button">Visualize</button>
+
+<div id="button" class="collapse"> 
+<table class="table">
+<tr><td> <%= button_to 'R Tumor/Normal Box Plot', runR_path, :class => 'btn btn-primary' %> </td>
+<td><%= button_to 'R Race Comparison Plot', runRrace_path , :class => 'btn btn-primary' %></td>
+<td><%= button_to 'Race Anova Stats', runRrace_file_path , :class => 'btn btn-primary' %></td></tr>
+<tr><td><%= button_to 'R Stage Comparison', runRstage_path, :class => 'btn btn-primary' %></td>
+<td><%= button_to 'Stage Anova Stats', runRstage_file_path, :class => 'btn btn-primary' %></td>
+<td><%= button_to 'R Vital Status Comparison Plot', runRstatus_path, :class => 'btn btn-primary' %></td></tr>
+<tr><td><%= button_to 'R Kmeans cluster generation', runRkmeans_cluster_path, :class => 'btn btn-primary' %></td>
+<td><%= button_to 'R Cox Hazards Model', runRcoxph_path, :class => 'btn btn-primary' %></td>
+<td><button type="button" class="btn btn-primary collapsed" data-toggle="collapse" data-target="#kaplan">Kaplan Meier</button>
+<div id="kaplan" class="collapse"> 
+<table class="table">
+<td><%= button_to 'R Kaplan Meier Graph', runRkaplansingle_path, :class => ' btn btn-primary' %></td>
+<td><%= button_to 'Download Kaplan Meier Data', runRkaplansingle_file_path, :class => ' btn btn-primary' %></td>
+</table></div></tr>
+</table></div></div>
+<th> Download:
+  <%= link_to "Excel/CSV", abundances_export_path(params.merge(format: "csv")), download: 'Abundance_Query.csv' %></th>
+
+ <th> <%= form_tag import_abundances_path, multipart: true do %>
+    <%= file_field_tag :file , required: true%>
+    <%= submit_tag "Import CSV", :class => 'btn btn-primary' %></th>
+    <%end%>
+</tr>
+</thead>
+</table>
+
+<%= column_chart [
+  {name: "TPM", data: @abundances.pluck(:sample_id, :tpm )},{name: "Read Counts", data: @abundances.pluck(:sample_id, :est_counts )}
+
+  ],library: { chart: {zoomType: 'x'}},width: "1200px", title: "Abundances Per Sample"%>
+
+
+<h1 align="center">Pipeline Abundance Calculations</h1>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+<div class="input-group">
+<%= search_form_for @search do |f| %>
+<%= f.label "Quick Search" %>
+    <th> <%= f.search_field :sample_id_eq, :Placeholder => ' One Keyword Query', class: 'form-control' %><th>
+    <th><%= f.search_field :target_id_eq, :Placeholder => ' One Keyword Query',class: 'form-control' %><th>
+    <th><span class="input-group-btn">
+<%= f.submit "Search", :class => 'btn btn-primary' %> 
+</span> </th>
+<%end%>
+</div></thead>
+</table>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+  <th>  <%= sort_link @search, :sample_id,"TCGA_ID" %> </th>
+  <th>  <%= sort_link @search, :target_id,"ENSEMBLID" %> <th>
+  <th>  <%= sort_link @search,:length, "Length" %> <th>
+  <th> <%= sort_link @search,:eff_length, "Effective Length" %> <th>
+  <th>  <%= sort_link @search,:est_counts,"Estimated Counts" %> <th>
+  <th>  <%= sort_link @search,:tpm,"Transcripts Per Million (TPM)" %> <th>
+</tr>
+<meta name="turbolinks-cache-control" content="no-cache">
+</thead>
+ <%= will_paginate @abundancez%>
+    <% @abundancez.each do |abundance| %>
+    <% if abundance.flag == true %>
+<tr  style="background-color:SpringGreen" >
+  <% else %>
+ <tr > 
+  <% end %>
+  <td><button type="button" class="btn btn-link" data-toggle="modal" data-target="#<%=abundance.sample_id%>" data-whatever="<%= abundance.sample_id%>"> <%=abundance.sample_id%>  </button> 
+  
+
+<!-- Modal -->
+<div class="modal fade" id="<%=abundance.sample_id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Information for sample <%=abundance.sample_id%> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <form>
+      <div class="form-group">
+            <label  class="col-form-label">Gender:</label>
+            <label  class="col-form-label"><%= abundance.sample.gender %></label>
+          </div>
+       <div class="form-group">
+            <label  class="col-form-label">Race:</label>
+            <label  class="col-form-label"><%= abundance.sample.race %> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Status:</label>
+            <label  class="col-form-label"><%= abundance.sample.vital_status %> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Cancer Stage:</label>
+            <label  class="col-form-label"><%= abundance.sample.ajcc_pathologic_tumor_stage%> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Location Of Tumor:</label>
+            <label  class="col-form-label"><%= abundance.sample.anatomic_neoplasm_subdivision%>  </label>
+          </div>
+          <div class="form-group">
+            <label  class="col-form-label">Notes for this Record:</label>
+            <% if  abundance.notes.nil? %>
+            <label  class="col-form-label">There are no notes for this record</label>
+            <% else %>
+            <label  class="col-form-label"><%= abundance.notes%>  </label>
+            <% end %>
+          </div>
+           <div class="form-group">
+            <label  class="col-form-label">Flagged as Important?</label>
+            <label  class="col-form-label"><%=abundance.flag %> </label>
+          </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="window.open('/samples/<%=abundance.sample_id%>','_blank', 'height=600, width=600')">More Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <td><%= link_to abundance.target_id, abundance, :onclick=> "window.open(this.href,'create_company', 'height=600, width=600');return false;"  %><td>
+    <td><%= abundance.length %><td>
+    <td><%= abundance.eff_length%><td>
+    <td><%= abundance.est_counts%><td>
+    <td><%= abundance.tpm%><td>
+    <td><% abundance.sample.race %><td>
+    <td><% abundance.sample.vital_status %><td>
+    <td><% abundance.sample.status_bool %><td>
+    <td><% abundance.sample.death_days_to %><td>
+</div> </td>
+  <%  end %>
+
+</tr>
+</table>
+
+</div>
+</body>
+</div>

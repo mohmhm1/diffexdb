@@ -36,6 +36,8 @@
   <%= search_form_for @search do |f| %>
 <th><%= f.label :ext_gene_cont, "Search By Gene Name" %>
 <%= f.search_field :ext_gene_cont %> </th>
+<th><%= f.label :biotype_cont, "Search By Biotype" %>
+<%= f.select :biotype_cont, options_for_select([["ALL",""],["3prime_overlapping_ncRNA"],["IG_C_gene "],["IG_C_pseudogene"],["IG_J_gene"],["IG_V_gene"],["IG_V_pseudogene"],["Mt_rRNA"],["Mt_tRNA"],["NA"],["TEC"],["TR_C_gene"],["TR_V_gene"],["antisense"],["bidirectional_promoter_lncRNA"],["lincRNA"],["macro_lncRNA"],["miRNA"],["misc_RNA"],["non_coding"],["non_stop_decay"],["nonsense_mediated_decay"],["polymorphic_pseudogene"],["processed_pseudogene"],["processed_transcript"],["protein_coding"],["pseudogene"],["rRNA"],["retained_intron"],["scRNA"],["scaRNA"],["sense_intronic"],["sense_overlapping"],["snRNA"],["snoRNA"],["transcribed_processed_pseudogene"],["transcribed_unitary_pseudogene"],["transcribed_unprocessed_pseudogene"],["unitary_pseudogene"],["unprocessed_pseudogene"]],:selected=> params[:q][:biotype_cont])%></th>
 <%= f.submit "Search" %>
 </tr>
 <% end %>

@@ -1,0 +1,102 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container"> 
+<table class="table table-hover">
+  <thead class="thead-dark">
+ <th> Download:
+  <%= link_to "Excel/CSV", splices_export_path(params.merge(format: "csv")), download: 'Query.csv' %></th>
+
+ <th> <%= form_tag import_splices_path, multipart: true do %>
+    <%= file_field_tag :file, required: true %>
+    <%= submit_tag "Import CSV" %></th>
+    <%end%>
+    </thead>
+</table>
+
+<h1 align="center"> Event Level PSI calculations</h1>
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+<div class="input-group">
+<%= search_form_for @search do |f| %>
+<%= f.label "Quick Search" %>
+    <th> <%= f.search_field :sample_id_cont_any, :Placeholder => ' One Keyword Query', class: 'form-control' %><th>
+    <th><%= f.search_field :ensembl_cont_any, :Placeholder => ' One Keyword Query',class: 'form-control' %><th>
+    <th><span class="input-group-btn">
+<%= f.submit "Search", :class => 'btn btn-primary' %> 
+</span></th>
+ <%end%>
+ </div></thead>
+</table>
+<table class="table table-hover">
+  <thead class="thead-dark">
+  
+ <th> <%= sort_link @search, :sample_id,"TCGA_ID" %> </th>
+  <th> <%= sort_link @search, :ensembl, "ENSEMBLID" %> <th>
+  <th> <%= sort_link @search, :event, "Splicing Event" %> <th>
+  <th> <%= sort_link @search, :coordinates, "Coordinates (chr:Start:End:strand" %> <th>
+  <th> <%= sort_link @search, :dpsi, "PSI (Percent Spliced In)" %> <th>
+
+</thead>
+<%= will_paginate @splicez %>
+<% @splicez.each do |splice| %>
+ 
+<tr>
+  <td><button type="button" class="btn btn-link" data-toggle="modal" data-target="#<%=splice.sample_id%>" data-whatever="<%= splice.sample_id%>"> <%=splice.sample_id%>  </button> </td>
+  
+
+<!-- Modal -->
+<div class="modal fade" id="<%=splice.sample_id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Information for sample <%=splice.sample_id%> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+  
+      <div class="modal-body">
+
+      <form>
+      <div class="form-group">
+            <label  class="col-form-label">Gender:</label>
+            <label  class="col-form-label"><%= splice.sample.gender %></label>
+          </div>
+       <div class="form-group">
+            <label  class="col-form-label">Race:</label>
+            <label  class="col-form-label"><%= splice.sample.race %> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Status:</label>
+            <label  class="col-form-label"><%= splice.sample.vital_status %> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Cancer Stage:</label>
+            <label  class="col-form-label"><%= splice.sample.ajcc_pathologic_tumor_stage%> </label>
+          </div>
+        <div class="form-group">
+            <label  class="col-form-label">Location Of Tumor:</label>
+            <label  class="col-form-label"><%= splice.sample.anatomic_neoplasm_subdivision%>  </label>
+          </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="window.open('/samples/<%=splice.sample_id%>','_blank', 'height=600, width=600')">More Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <td><%= link_to splice.ensembl, 'http://www.ensembl.org/id/' + splice.ensembl, target: :_blank %><td>
+   <td><%= splice.event %><td>
+    <td><%= splice.coordinates%><td>
+    <td><%= splice.dpsi%><td>
+    <td><%= splice.pval%><td>
+  <%  end %>
+</tr>
+</table>
+
+</div>
+

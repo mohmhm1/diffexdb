@@ -1,0 +1,46 @@
+<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#demo1">Pathway Analysis</button>
+<div id ="demo1" class="collapse">
+  <tr>
+<tr>
+  <strong>Pathway Analyses for</strong>
+  <%= @sleuth.ext_gene %>
+</p>
+ <table class="table">
+  <thead class="thead-dark">
+    <tr>
+<th> Name of Pathway</th>
+<th> ID </th>
+<% @sleuths["result"].each do |sleuth| %>
+<tr>
+  <td><%= sleuth["name"]%></td>
+  <td><a href="https://www.wikipathways.org/wpi/PathwayWidget.php?id=<%= sleuth["id"]%>&label=<%=@sleuth.ext_gene%>&colors=green" target="frame"> <%=sleuth["id"]%> </a></td>
+  
+  <% end %>
+</tr>
+</tr>
+</thead>
+</table>
+</tr></tr>
+<iframe name="frame" id="frame" width="1350" height="1250"></iframe>
+</div>
+
+<button type="button" class="btn btn-lg btn-info collapsed" data-toggle="collapse" data-target="#pub">Publications Relating to <%= @sleuth.ext_gene %> and Colorectal Cancer </button>
+<div id ="pub" class="collapse">
+  <div class="col-md-8 left">
+  <iframe name="frame1" id="frame1" width="800" height="800"></iframe>
+</div>
+<div class="col-md-3 right">
+  <table class="table">
+  <thead class="thead-dark">
+
+ 
+ <tr>
+  <th> PMID </th>
+   <% @pubs["esearchresult"]["idlist"].each do |pub| %>
+<tr>
+  <td><%= link_to pub,'https://www.ncbi.nlm.nih.gov/pubmed/' + pub, target: :_blank %></td>
+
+<td><a href="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=text&rettype=abstract&id='<%=pub%>" target="frame1"> Click For Abstract </a></td>
+  <% end %>
+</tr></tr></thead></table>
+</div></div>

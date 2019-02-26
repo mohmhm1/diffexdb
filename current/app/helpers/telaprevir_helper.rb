@@ -1,0 +1,2 @@
+module TelaprevirHelper
+end

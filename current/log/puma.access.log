@@ -1,0 +1,1149 @@
+=== puma startup: 2018-08-25 01:40:21 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:twitteR’:
+
+    id, location
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in file(file, ifelse(append, "a", "w")) : 
+  cannot open the connection
+In addition: Warning message:
+In file(file, ifelse(append, "a", "w")) :
+  cannot open file 'public/KM_data.csv': No such file or directory
+2018-09-19 19:48:28 +0000: HTTP parse error, malformed request (127.0.0.1): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2018-09-21 15:23:08 +0000: Rack app error handling request { ZKODIVAV / }
+#<ActionController::UnknownHttpMethod: ZKODIVAV, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-09-21 15:23:08 +0000: Rack app error handling request { DEBUG / }
+#<ActionController::UnknownHttpMethod: DEBUG, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-09-21 15:23:09 +0000: Rack app error handling request { TRACK / }
+#<ActionController::UnknownHttpMethod: TRACK, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-09-21 15:23:09 +0000: Rack app error handling request { TRACK / }
+#<ActionController::UnknownHttpMethod: TRACK, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-09-21 15:29:56 +0000: Rack app error handling request { DEBUG / }
+#<ActionController::UnknownHttpMethod: DEBUG, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-09-22 04:54:08 +0000: Rack app error handling request { DEBUG / }
+#<ActionController::UnknownHttpMethod: DEBUG, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-09-25 10:25:44 +0000: Rack app error handling request { DEBUG / }
+#<ActionController::UnknownHttpMethod: DEBUG, accepted HTTP methods are OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT, PROPFIND, PROPPATCH, MKCOL, COPY, MOVE, LOCK, UNLOCK, VERSION-CONTROL, REPORT, CHECKOUT, CHECKIN, UNCHECKOUT, MKWORKSPACE, UPDATE, LABEL, MERGE, BASELINE-CONTROL, MKACTIVITY, ORDERPATCH, ACL, SEARCH, MKCALENDAR, and PATCH>
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:344:in `check_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/http/request.rb:105:in `request_method'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:51:in `started_request_message'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `block in call_app'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:427:in `add'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/logger.rb:52:in `add'
+/home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/logger.rb:489:in `info'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:37:in `call_app'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `block in call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/tagged_logging.rb:68:in `tagged'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/rack/logger.rb:20:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/quiet_assets-1.1.0/lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/request_store-1.4.1/lib/request_store/middleware.rb:19:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/methodoverride.rb:22:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/runtime.rb:18:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/static.rb:120:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/sendfile.rb:113:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:518:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:165:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:225:in `call'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:658:in `handle_request'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:472:in `process_client'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/server.rb:332:in `block in run'
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+2018-10-12 21:07:39 +0000: HTTP parse error, malformed request (127.0.0.1): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2018-10-15 21:02:00 +0000: HTTP parse error, malformed request (127.0.0.1): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Invalid or incomplete POST params
+2018-12-23 03:05:34 +0000: HTTP parse error, malformed request (127.0.0.1): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+2018-12-24 05:08:28 +0000: HTTP parse error, malformed request (127.0.0.1): #<Puma::HttpParserError: Invalid HTTP format, parsing fails.>
+---
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+A marker object has been specified, but markers is not in the mode
+Adding markers to the mode...
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Warning messages:
+1: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+2: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Warning messages:
+1: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+2: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+A marker object has been specified, but markers is not in the mode
+Adding markers to the mode...
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Warning messages:
+1: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+2: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+=== puma startup: 2019-01-15 06:48:33 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+=== puma startup: 2019-01-15 06:51:19 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+=== puma startup: 2019-01-15 06:56:29 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘twitteR’
+
+The following objects are masked from ‘package:dplyr’:
+
+    id, location
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+A marker object has been specified, but markers is not in the mode
+Adding markers to the mode...
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in split(mydata, mydata$V4) : object 'mydata' not found
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+=== puma startup: 2019-01-15 07:01:00 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+Loading required package: ggplot2
+Need help getting started? Try the cookbook for R:
+http://www.cookbook-r.com/Graphs/
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+
+Attaching package: ‘twitteR’
+
+The following objects are masked from ‘package:dplyr’:
+
+    id, location
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Warning messages:
+1: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+2: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+=== puma startup: 2019-01-15 07:09:05 +0000 ===
+/home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:244:in `rescue in load_dependency': /home/deploy/apps/diffexdb/releases/20180825013948/app/controllers/abundances_controller.rb:999: syntax error, unexpected keyword_end, expecting end-of-input (SyntaxError)
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:237:in `load_dependency'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:360:in `require_or_load'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:317:in `depend_on'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:233:in `require_dependency'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:472:in `block (2 levels) in eager_load!'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:471:in `each'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:471:in `block in eager_load!'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:469:in `each'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:469:in `eager_load!'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:346:in `eager_load!'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:56:in `each'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:56:in `block in <module:Finisher>'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `instance_exec'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `run'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:228:in `block in tsort_each'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:347:in `each'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:347:in `call'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:226:in `tsort_each'
+	from /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:205:in `tsort_each'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:54:in `run_initializers'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:352:in `initialize!'
+	from /home/deploy/apps/diffexdb/current/config/environment.rb:5:in `<top (required)>'
+	from /home/deploy/apps/diffexdb/current/config.ru:3:in `require'
+	from /home/deploy/apps/diffexdb/current/config.ru:3:in `block in <main>'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:55:in `initialize'
+	from /home/deploy/apps/diffexdb/current/config.ru:in `new'
+	from /home/deploy/apps/diffexdb/current/config.ru:in `<main>'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:49:in `eval'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:49:in `new_from_string'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:40:in `parse_file'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:318:in `load_rackup'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:243:in `app'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/runner.rb:145:in `load_and_bind'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/single.rb:96:in `run'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/launcher.rb:184:in `run'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/cli.rb:78:in `run'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/bin/puma:10:in `<top (required)>'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/bin/puma:23:in `load'
+	from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/bin/puma:23:in `<main>'
+=== puma startup: 2019-01-15 07:09:33 +0000 ===
+=== puma startup: 2019-01-15 07:09:33 +0000 ===
+SyntaxError: /home/deploy/apps/diffexdb/releases/20180825013948/app/controllers/abundances_controller.rb:999: syntax error, unexpected keyword_end, expecting end-of-input
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:244:in `rescue in load_dependency'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:237:in `load_dependency'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:360:in `require_or_load'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:317:in `depend_on'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:233:in `require_dependency'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:472:in `block (2 levels) in eager_load!'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:471:in `each'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:471:in `block in eager_load!'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:469:in `each'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:469:in `eager_load!'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/engine.rb:346:in `eager_load!'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:56:in `each'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application/finisher.rb:56:in `block in <module:Finisher>'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `instance_exec'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:30:in `run'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:55:in `block in run_initializers'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:228:in `block in tsort_each'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:431:in `each_strongly_connected_component_from'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:349:in `block in each_strongly_connected_component'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:347:in `each'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:347:in `call'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:347:in `each_strongly_connected_component'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:226:in `tsort_each'
+  /home/deploy/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/tsort.rb:205:in `tsort_each'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/initializable.rb:54:in `run_initializers'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/railties-4.2.6/lib/rails/application.rb:352:in `initialize!'
+  /home/deploy/apps/diffexdb/current/config/environment.rb:5:in `<top (required)>'
+  /home/deploy/apps/diffexdb/current/config.ru:3:in `require'
+  /home/deploy/apps/diffexdb/current/config.ru:3:in `block in <main>'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:55:in `instance_eval'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:55:in `initialize'
+  /home/deploy/apps/diffexdb/current/config.ru:in `new'
+  /home/deploy/apps/diffexdb/current/config.ru:in `<main>'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:49:in `eval'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:49:in `new_from_string'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/rack-1.6.10/lib/rack/builder.rb:40:in `parse_file'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:318:in `load_rackup'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/configuration.rb:243:in `app'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/runner.rb:145:in `load_and_bind'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/single.rb:96:in `run'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/launcher.rb:184:in `run'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/lib/puma/cli.rb:78:in `run'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/puma-3.12.0/bin/puma:10:in `<top (required)>'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/bin/puma:23:in `load'
+  /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/bin/puma:23:in `<top (required)>'
+=== puma startup: 2019-01-15 07:12:43 +0000 ===
+=== puma startup: 2019-01-15 07:12:43 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘twitteR’
+
+The following objects are masked from ‘package:dplyr’:
+
+    id, location
+
+Error in time[[i]] <- sort(unique(y[who, 1])) : 
+  attempt to select less than one element in integerOneIndex
+In addition: Warning message:
+In Surv(TUfin$V12, TUfin$V11) : Invalid status value, converted to NA
+Error in ifelse(is.null(s$strata) == T, 1, length(s$strata)) : 
+  object 'km' not found
+Error in plotly::ggplotly(p1) : object 'p1' not found
+Error in dots2plots(...) : object 'tr' not found
+Error in summary(km) : object 'km' not found
+Error in as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv",  : 
+  object 'res' not found
+Error in is.data.frame(x) : object 'save.df' not found
+=== puma startup: 2019-01-15 07:17:12 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘twitteR’
+
+The following objects are masked from ‘package:dplyr’:
+
+    id, location
+
+Error in time[[i]] <- sort(unique(y[who, 1])) : 
+  attempt to select less than one element in integerOneIndex
+In addition: Warning message:
+In Surv(TUfin$V12, TUfin$V11) : Invalid status value, converted to NA
+Error in ifelse(is.null(s$strata) == T, 1, length(s$strata)) : 
+  object 'km' not found
+Error in plotly::ggplotly(p1) : object 'p1' not found
+Error in dots2plots(...) : object 'tr' not found
+Error in summary(km) : object 'km' not found
+Error in as.data.frame(res[c("strata", "time", "n.risk", "n.event", "surv",  : 
+  object 'res' not found
+Error in is.data.frame(x) : object 'save.df' not found
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in as.data.table(mydata) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in is.factor(vector) : object 'mydata' not found
+Error in t.test.default(TU$V2, N$V2) : object 'N' not found
+Error in add_trace(., N, y = N$V2, name = "Normal", yaxis = list(type = "log")) : 
+  object 'N' not found
+Error in inherits(x, "htmlwidget") : object 'j' not found
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in time[[i]] <- sort(unique(y[who, 1])) : 
+  attempt to select less than one element in integerOneIndex
+In addition: Warning message:
+In Surv(TUfin$V12, TUfin$V11) : Invalid status value, converted to NA
+A marker object has been specified, but markers is not in the mode
+Adding markers to the mode...
+Warning messages:
+1: Can only have one: source 
+2: Can only have one: config 
+3: Can only have one: highlight 
+=== puma startup: 2019-01-15 19:03:45 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 19:14:15 +0000 ===
+=== puma startup: 2019-01-15 19:15:37 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 19:24:20 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 19:49:44 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 19:54:58 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 19:58:12 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 20:04:41 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-01-15 20:08:48 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-02-25 21:33:27 +0000 ===
+=== puma startup: 2019-02-25 21:39:31 +0000 ===
+=== puma startup: 2019-02-25 21:50:30 +0000 ===
+=== puma startup: 2019-02-25 21:52:45 +0000 ===
+=== puma startup: 2019-02-25 21:53:49 +0000 ===
+=== puma startup: 2019-02-25 21:57:20 +0000 ===
+=== puma startup: 2019-02-25 22:00:09 +0000 ===
+=== puma startup: 2019-02-25 22:05:32 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-02-25 22:24:23 +0000 ===
+=== puma startup: 2019-02-25 22:28:22 +0000 ===
+=== puma startup: 2019-02-25 22:46:47 +0000 ===
+=== puma startup: 2019-02-25 22:48:03 +0000 ===
+=== puma startup: 2019-02-25 22:54:50 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+data.table 1.11.4  Latest news: http://r-datatable.com
+Loading required package: ggplot2
+
+Attaching package: ‘plotly’
+
+The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following object is masked from ‘package:graphics’:
+
+    layout
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:data.table’:
+
+    between, first, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Error in library(ggfortify) : there is no package called ‘ggfortify’
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in setDT(as.data.frame(x, ...)) : 
+  Argument 'x' to 'setDT' should be a 'list', 'data.frame' or 'data.table'
+Error in data$V1 : object of type 'closure' is not subsettable
+
+Attaching package: ‘twitteR’
+
+The following objects are masked from ‘package:dplyr’:
+
+    id, location
+
+A marker object has been specified, but markers is not in the mode
+Adding markers to the mode...
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in data$V1 : object of type 'closure' is not subsettable
+Error in var(x) : 'x' is NULL
+In addition: Warning messages:
+1: In is.na(x) : is.na() applied to non-(list or vector) of type 'NULL'
+2: In mean.default(x) : argument is not numeric or logical: returning NA
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file 'app/assets/data.csv': No such file or directory
+Warning messages:
+1: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+2: In RColorBrewer::brewer.pal(N, "Set2") :
+  n too large, allowed maximum for palette Set2 is 8
+Returning the palette you asked for with that many colors
+
+=== puma startup: 2019-02-25 23:11:08 +0000 ===
+=== puma startup: 2019-02-25 23:18:12 +0000 ===
+=== puma startup: 2019-02-25 23:30:42 +0000 ===
+=== puma startup: 2019-02-25 23:37:59 +0000 ===
+=== puma startup: 2019-02-26 04:57:27 +0000 ===
+=== puma startup: 2019-02-26 04:57:27 +0000 ===
+=== puma startup: 2019-02-26 05:13:05 +0000 ===
+=== puma startup: 2019-02-26 05:13:05 +0000 ===
+=== puma startup: 2019-02-26 05:28:24 +0000 ===
+=== puma startup: 2019-02-26 05:31:59 +0000 ===
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+=== puma startup: 2019-02-26 05:45:02 +0000 ===

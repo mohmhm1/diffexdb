@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<script type="application/javascript">
+
+function resizeIFrameToFitContent( iFrame ) {
+
+    iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+
+    var iFrame = document.getElementById( 'iFrame1' );
+    resizeIFrameToFitContent( iFrame );
+
+    // or, to resize all iframes:
+    var iframes = document.querySelectorAll("iframe");
+    for( var i = 0; i < iframes.length; i++) {
+        resizeIFrameToFitContent( iframes[i] );
+    }
+} );
+
+</script>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "DiffExDB" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Drug" %>">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-no-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head> 
+
+<% if action_name == "show" %>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" <a href="/">DiffExDB</a>
+
+    </div></div></nav>
+
+    <%= yield %>
+  <% else %>             
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" <a href="/">DiffExDB</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/samples#index" data-no-turbolink="false">Sample Metadata and Query</a></li>
+      <li><a href="/abundances?utf8=✓&q%5Bsample_id_eq%5D=&q%5Btarget_id_eq%5D=ENST00000362079.2&commit=Search"data-no-turbolink="true">Normalized Counts</a></li> 
+       <li><a href="/sleuths?utf8=✓&q%5Bmodel_cont%5D=%3A"data-no-turbolink="true">Differential Expression Analysis</a></li>
+       <li><a href="/splices?utf8=✓&q%5Bsample_id_eq%5D=TCGA-F4-6704&q%5Bensembl_eq%5D=ENSG00000000003&commit=Search">Event Level Splicing  analyses</a></li> 
+       <li><a href="/transplices?utf8=✓&q%5Bsample_id_eq%5D=TCGA-F4-6704&q%5Bgene_eq%5D=ENSG00000133703&commit=Search"data-no-turbolink="true">Transcript Level Splicing Analyses</a></li>
+    </ul>
+    
+           
+  </div>
+</nav>
+<%= yield %>
+     
+<% end %>
+
+
+<body>
+</html>
+</body>
+
+</html>

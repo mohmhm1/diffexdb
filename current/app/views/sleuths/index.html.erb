@@ -1,0 +1,96 @@
+<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="http://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<p id="notice"><%= notice %></p>
+<div class="container">
+ <th> Download:
+  <%= link_to "Excel/CSV", sleuths_export_path(params.merge(format: "csv")), download: 'Query.csv' %></th>
+
+ <th> <%= form_tag import_sleuths_path, multipart: true do %>
+    <%= file_field_tag :file, required: true %>
+    <%= submit_tag "Import CSV" %></th>
+    <%end%>
+
+
+
+<h1>Differential Expression Model Data</h1>
+<%= search_form_for @search do |f| %>
+<th><%= f.label :model_cont, "Search By Model" %>
+<%= f.select :model_cont, options_for_select([["ALL", ":"],["ALL Based on Condition", "Condition"],["ALL Naive Models", "Naive"],["All Based on vital Status", "status"],['All based on stage',':stage'],'Gender:Condition','Naive:Stage','Race:Condition','MSI:Condition',["Mis Match Repair","MMR"],'MMR-MLH1:Condition','MMR-MSH2:Condition','MMR-MSH6:Condition','MMR-PMS2:Condition','KRAS:Condition','BRAF:Condition','Anatomy:Condition','Naive:status','days_to_death:status','race:status','Gender:status','Anatomy:status','msi:status','KRAS:status','BRAF:status',["Mis Match Repair (Status only)","MMR-S"],'MMR-S-MLH1:status','MMR-S-MSH2:status','MMR-S-MSH6:status','MMR-S-PMS2:status',["status:stage"],["gender:stage"] ,["race:stage"] ,["MSI:stage"],["MMR-STAGE-MLH1:stage"] ,["MMR-STAGE-MSH2:stage"] ,["MMR-STAGE-MSH6:stage"] ,["MMR-STAGE-PMS2:stage"] ,["KRAS:stage"] ,["BRAF:stage"] ,["anatomy:stage"]],:selected => params[:q][:model_cont])%></th>
+<%= f.submit "Search", :name => nil %>
+
+<% end %>
+<%= pie_chart @sleuthz.group(:biotype).count, title: "Biotype Distribution For Model", height: "700px", exporting: {
+        showTable: true
+    } %>
+
+    <br>
+    <br>
+<%= column_chart [
+  {name: "Q-Value", data: @sleuthqval.pluck(:ext_gene, :pval,:model)}
+  ],library: { chart: {zoomType: 'x'}},width: "1200px", title: "Gene Q-Value Graph"%>
+
+<div class="container">
+<div style="overflow: auto">
+  <tr>
+  <%= search_form_for @search do |f| %>
+<th><%= f.label :ext_gene_cont, "Search By Gene Name" %>
+<%= f.search_field :ext_gene_cont %> </th>
+<%= f.submit "Search" %>
+</tr>
+<% end %>
+  <table class="table">
+  <thead class="thead-dark">
+    <tr>
+  <th> <%= sort_link @search, :model, "Model Fitted" %> </th>
+  <th> <%= sort_link @search, :biotype, "Transcript Biotype" %> </th>
+  <th> <%= sort_link @search, :ext_gene, "Common Gene Name" %> </th>
+  <th> <%= sort_link @search, :ens_gene, "Gene EnsemblID " %> </th>
+  <th> <%= sort_link @search, :target_id,"Transcript ENSEMBLID" %> </th>
+  <th> <%= sort_link @search, :test_stat, "Test Stat" %> </th>
+  <th> <%= sort_link @search, :pval, "p-value" %> </th>
+  <th> <%= sort_link @search, :qval, "q-value" %> </th>
+  <th> <%= sort_link @search, :rss, "rss" %> </th>
+  <th> <%= sort_link @search, :rsssigma_sq, "Rs Sigma Squared" %> </th>
+  <th> <%= sort_link @search, :tech_var, "Tech variation" %> </th>
+  <th> <%= sort_link @search, :mean_obs, "mean Observation" %> </th>
+  <th> <%= sort_link @search, :var_obs, "var Observation" %> </th>
+  <th> <%= sort_link @search, :sigma_sq_pmax, "Sigma Squared" %> </th>
+  <th> <%= sort_link @search, :smooth_sigma_sq, "Smooth Sigma Squared" %> </th>
+  <th> <%= sort_link @search, :final_sigma_sq, "Final Smooth Sigma Squared" %> </th>
+  <th> <%= sort_link @search, :degrees_free, "Degrees of Freedom" %> </th>
+</tr>
+</thead>
+<%= will_paginate @sleuthz%>
+ <% @sleuthz.each do |sleuth| %>   
+   <tr>
+        <td><%= sleuth.model %></td>
+        <td><%= sleuth.biotype %></td>
+        <td><%= link_to sleuth.ext_gene, 'http://www.genecards.org/cgi-bin/carddisp.pl?gene=' + sleuth.ext_gene, target: :_blank%></td>
+        <td><%= link_to sleuth.ens_gene, 'http://www.ensembl.org/id/' + sleuth.ens_gene, target: :_blank %></td>
+        <td><%= link_to sleuth.target_id, 'http://www.ensembl.org/id/' + sleuth.target_id, target: :_blank %></td>
+        <td><%= sleuth.test_stat %></td>
+        <td><%= "%.1e" %sleuth.pval %></td>
+        <td><%= "%.1e" %sleuth.qval %></td>
+        <td><%= sleuth.rss %></td>
+        <td><%= sleuth.rsssigma_sq %></td>
+        <td><%= sleuth.tech_var %></td>
+        <td><%= sleuth.mean_obs %></td>
+        <td><%= sleuth.var_obs %></td>
+        <td><%= sleuth.sigma_sq_pmax %></td>
+        <td><%= sleuth.smooth_sigma_sq %></td>
+        <td><%= sleuth.final_sigma_sq %></td>
+        <td><%= sleuth.degrees_free %></td>
+        <td><%= link_to 'Edit', edit_sleuth_path(sleuth) %></td>
+        <td><%= link_to 'Info', sleuth %></td>
+
+      </tr>
+    <% end %>   
+ </th>
+</th>
+</table>
+
+
+<br>
+</div>
+<%= link_to 'New Sleuth', new_sleuth_path %>

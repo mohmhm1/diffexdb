@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   INFO ---------------------------------------------------------------------------
   INFO START 2019-02-26 13:16:52 -0500 cap production deploy
   INFO ---------------------------------------------------------------------------
@@ -676,3 +677,5 @@
   INFO [c0bc16e0] Running /usr/bin/env echo "Branch master (at 5f39d808dd523ac3068094e36670cb6f167ead69) deployed as release 20190226181655 by ahmed.mahmoud" >> /home/deploy/apps/diffexdb/revisions.log on 142.93.204.216
  DEBUG [c0bc16e0] Command: cd /home/deploy/apps/diffexdb/releases && /usr/bin/env echo "Branch master (at 5f39d808dd523ac3068094e36670cb6f167ead69) deployed as release 20190226181655 by ahmed.mahmoud" >> /home/deploy/apps/diffexdb/revisions.log
   INFO [cf179026] Finished in 0.059 seconds with exit status 0 (successful).
+=======
+>>>>>>> 5f39d808dd523ac3068094e36670cb6f167ead69

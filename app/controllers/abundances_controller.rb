@@ -9,7 +9,7 @@ class AbundancesController < ApplicationController
   # GET /abundances/1
   # GET /abundances/1.json
   def show
-    @ensembl = HTTParty.get('http://rest.ensembl.org' + '/lookup/id/' + @abundance.target_id,
+    @ensembl = HTTParty.get('http://rest.ensembl.org' + '/lookup/id/' + @abundance.target_id[/[^.]+/],
     :headers =>{'Content-Type' => 'application/json'} )
     if @ensembl["display_name"].nil? 
      @name = "1"

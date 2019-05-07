@@ -2866,3 +2866,303 @@
   INFO [105b3bfe] Running /usr/bin/env echo "Branch master (at ffec7a56dd215893427e2afa6bcfd7f4e54d0c0a) deployed as release 20190506200509 by ahmed.mahmoud" >> /home/deploy/apps/diffexdb/revisions.log on 142.93.204.216
  DEBUG [105b3bfe] Command: cd /home/deploy/apps/diffexdb/releases && /usr/bin/env echo "Branch master (at ffec7a56dd215893427e2afa6bcfd7f4e54d0c0a) deployed as release 20190506200509 by ahmed.mahmoud" >> /home/deploy/apps/diffexdb/revisions.log
   INFO [f066ef64] Finished in 0.106 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-07 00:24:09 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6afa4152] Running [ -d ~/.rvm ] on 142.93.204.216
+ DEBUG [6afa4152] Command: [ -d ~/.rvm ]
+ DEBUG [5e02c85b] Finished in 0.754 seconds with exit status 0 (successful).
+ DEBUG [cd4973c9] Running ~/.rvm/bin/rvm version on 142.93.204.216
+ DEBUG [cd4973c9] Command: ~/.rvm/bin/rvm version
+ DEBUG [f2194f70] 	rvm 1.29.4 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [f2194f70] 	
+ DEBUG [f2194f70] Finished in 0.295 seconds with exit status 0 (successful).
+ DEBUG [4d4f6426] Running ~/.rvm/bin/rvm current on 142.93.204.216
+ DEBUG [4d4f6426] Command: ~/.rvm/bin/rvm current
+ DEBUG [e0c2d619] 	ruby-2.3.0
+ DEBUG [e0c2d619] 	
+ DEBUG [e0c2d619] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG [9ca3df28] Running ~/.rvm/bin/rvm default do ruby --version on 142.93.204.216
+ DEBUG [9ca3df28] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [871ee0ec] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [871ee0ec] 	
+ DEBUG [871ee0ec] Finished in 0.414 seconds with exit status 0 (successful).
+  INFO [351a6447] Running /usr/bin/env mkdir -p /tmp on 142.93.204.216
+ DEBUG [351a6447] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a1325526] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 0.0%
+  INFO Uploading /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh 100.0%
+  INFO [faec83f4] Running /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh on 142.93.204.216
+ DEBUG [faec83f4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh
+  INFO [13f4fe32] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [40a26287] Running /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD on 142.93.204.216
+ DEBUG [40a26287] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git ls-remote git@github.com:mohmhm1/diffexdb.git HEAD )
+ DEBUG [6a8147d1] 	2605f88bbe9e75a6704c419276681d1c444be3cd
+ DEBUG [6a8147d1] 		
+ DEBUG [6a8147d1] 	HEAD
+ DEBUG [6a8147d1] 	
+  INFO [6a8147d1] Finished in 0.402 seconds with exit status 0 (successful).
+  INFO [a218cd70] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared /home/deploy/apps/diffexdb/releases on 142.93.204.216
+ DEBUG [a218cd70] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared /home/deploy/apps/diffexdb/releases
+  INFO [dd7b672f] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [340eea44] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/public/assets on 142.93.204.216
+ DEBUG [340eea44] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/public/assets
+  INFO [33f8da9a] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [ca670733] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/config on 142.93.204.216
+ DEBUG [ca670733] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/shared/config
+  INFO [21e48fd0] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [83121723] Running [ -f /home/deploy/apps/diffexdb/shared/config/secrets.yml ] on 142.93.204.216
+ DEBUG [83121723] Command: [ -f /home/deploy/apps/diffexdb/shared/config/secrets.yml ]
+ DEBUG [55b5b056] Finished in 0.090 seconds with exit status 0 (successful).
+ DEBUG [fd10e21b] Running [ -f /home/deploy/apps/diffexdb/shared/puma.rb ] on 142.93.204.216
+ DEBUG [fd10e21b] Command: [ -f /home/deploy/apps/diffexdb/shared/puma.rb ]
+ DEBUG [5e841e3a] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [21c20881] Running [ -f /home/deploy/apps/diffexdb/current/REVISION ] on 142.93.204.216
+ DEBUG [21c20881] Command: [ -f /home/deploy/apps/diffexdb/current/REVISION ]
+ DEBUG [0d456e74] Finished in 0.089 seconds with exit status 0 (successful).
+ DEBUG [3ba0bb75] Running /usr/bin/env cat /home/deploy/apps/diffexdb/current/REVISION 2>/dev/null on 142.93.204.216
+ DEBUG [3ba0bb75] Command: /usr/bin/env cat /home/deploy/apps/diffexdb/current/REVISION 2>/dev/null
+ DEBUG [6bb5e0f1] 	ee0fd825bad7fa4c2ff90fb2f6be38fd8cb0e57a
+ffec7a56dd215893427e2afa6bcfd7f4e54d0c0a
+ DEBUG [6bb5e0f1] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [ba572601] Running [ -f /home/deploy/apps/diffexdb/repo/HEAD ] on 142.93.204.216
+ DEBUG [ba572601] Command: [ -f /home/deploy/apps/diffexdb/repo/HEAD ]
+ DEBUG [b111a137] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/diffexdb/repo
+ DEBUG [f523ee73] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [f523ee73] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [6857d363] Finished in 0.087 seconds with exit status 0 (successful).
+  INFO [327f22c6] Running /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git on 142.93.204.216
+ DEBUG [327f22c6] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohmhm1/diffexdb.git )
+  INFO [4e450ebb] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [9941ab9e] Running /usr/bin/env git remote update --prune on 142.93.204.216
+ DEBUG [9941ab9e] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1df1e952] 	Fetching origin
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	remote: Enumerating objects: 15, done.[K
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	remote: Counting objects:   6% (1/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  13% (2/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  20% (3/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  26% (4/15)
+ DEBUG [1df1e952] 	   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  33% (5/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  40% (6/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  46% (7/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  53% (8
+ DEBUG [1df1e952] 	/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  60% (9/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  66% (10/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  73% (11/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  
+ DEBUG [1df1e952] 	80% (12/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  86% (13/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects:  93% (14/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects: 100% (15/15)   [K
+ DEBUG [1df1e952] 	remote: Counting objects: 100% (15/15), done.[K
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	remote: Compressing objects:  12% (1/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects:  25% (2/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects:  37% (3/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects:  50% (4/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects:  62% (5/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects:  75% (6/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects:  87% (7/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects: 100% (8/8)   [K
+ DEBUG [1df1e952] 	remote: Compressing objects: 100% (8/8), done.[K
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	remote: Total 8 (delta 7), reused 1 (delta 0), pack-reused 0[K
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	Unpacking objects:  12% (1/8)   
+ DEBUG [1df1e952] 	Unpacking objects:  25% (2/8)   
+ DEBUG [1df1e952] 	Unpacking objects:  37% (3/8)   
+ DEBUG [1df1e952] 	Unpacking objects:  50% (4/8)   
+ DEBUG [1df1e952] 	Unpacking objects:  62% (5/8)   
+ DEBUG [1df1e952] 	Unpacking objects:  75% (6/8)   
+ DEBUG [1df1e952] 	Unpacking objects:  87% (7/8)   
+ DEBUG [1df1e952] 	Unpacking objects: 100% (8/8)   
+ DEBUG [1df1e952] 	Unpacking objects: 100% (8/8), done.
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	From github.com:mohmhm1/diffexdb
+ DEBUG [1df1e952] 	
+ DEBUG [1df1e952] 	   ffec7a5..2605f88  master     -> master
+ DEBUG [1df1e952] 	
+  INFO [1df1e952] Finished in 0.402 seconds with exit status 0 (successful).
+ DEBUG [12e5fcab] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [12e5fcab] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [3dfffb81] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [cac2904a] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412 on 142.93.204.216
+ DEBUG [cac2904a] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412 )
+  INFO [3abc3bad] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [834c99fe] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/diffexdb/releases/20190507042412 on 142.93.204.216
+ DEBUG [834c99fe] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/apps/diffexdb/releases/20190507042412 )
+  INFO [c3bc5408] Finished in 0.439 seconds with exit status 0 (successful).
+ DEBUG [33b253c5] Running if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [33b253c5] Command: if test ! -d /home/deploy/apps/diffexdb/repo; then echo "Directory does not exist '/home/deploy/apps/diffexdb/repo'" 1>&2; false; fi
+ DEBUG [a0e10107] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [a073d0be] Running /usr/bin/env git rev-list --max-count=1 master on 142.93.204.216
+ DEBUG [a073d0be] Command: cd /home/deploy/apps/diffexdb/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-diffexdb-production-ahmed.mahmoud.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3ed0a293] 	2605f88bbe9e75a6704c419276681d1c444be3cd
+ DEBUG [3ed0a293] 	
+ DEBUG [3ed0a293] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [cd049cd1] Running if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [cd049cd1] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi
+ DEBUG [6305bd1c] Finished in 0.089 seconds with exit status 0 (successful).
+  INFO [e768aa9e] Running /usr/bin/env echo "2605f88bbe9e75a6704c419276681d1c444be3cd" >> REVISION on 142.93.204.216
+ DEBUG [e768aa9e] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && /usr/bin/env echo "2605f88bbe9e75a6704c419276681d1c444be3cd" >> REVISION
+  INFO [4194effd] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [06e666dc] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412/config on 142.93.204.216
+ DEBUG [06e666dc] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412/config
+  INFO [8caf8af3] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [5b6088bb] Running [ -L /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml ] on 142.93.204.216
+ DEBUG [5b6088bb] Command: [ -L /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml ]
+ DEBUG [cbfc27b4] Finished in 0.091 seconds with exit status 1 (failed).
+ DEBUG [750d449c] Running [ -f /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml ] on 142.93.204.216
+ DEBUG [750d449c] Command: [ -f /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml ]
+ DEBUG [98d52fbd] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [9ca97a6a] Running /usr/bin/env rm /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml on 142.93.204.216
+ DEBUG [9ca97a6a] Command: /usr/bin/env rm /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml
+  INFO [ef0cce2b] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [f2564eab] Running /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/config/secrets.yml /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml on 142.93.204.216
+ DEBUG [f2564eab] Command: /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/config/secrets.yml /home/deploy/apps/diffexdb/releases/20190507042412/config/secrets.yml
+  INFO [a9bfc788] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [d549db15] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412/public on 142.93.204.216
+ DEBUG [d549db15] Command: /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412/public
+  INFO [b1a71c5d] Finished in 0.092 seconds with exit status 0 (successful).
+ DEBUG [cbf2f417] Running [ -L /home/deploy/apps/diffexdb/releases/20190507042412/public/assets ] on 142.93.204.216
+ DEBUG [cbf2f417] Command: [ -L /home/deploy/apps/diffexdb/releases/20190507042412/public/assets ]
+ DEBUG [2c7a8194] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [e30c1c79] Running [ -d /home/deploy/apps/diffexdb/releases/20190507042412/public/assets ] on 142.93.204.216
+ DEBUG [e30c1c79] Command: [ -d /home/deploy/apps/diffexdb/releases/20190507042412/public/assets ]
+ DEBUG [974297c1] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [95cd9e75] Running /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20190507042412/public/assets on 142.93.204.216
+ DEBUG [95cd9e75] Command: /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20190507042412/public/assets
+  INFO [ac159682] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [a307cef5] Running /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/public/assets /home/deploy/apps/diffexdb/releases/20190507042412/public/assets on 142.93.204.216
+ DEBUG [a307cef5] Command: /usr/bin/env ln -s /home/deploy/apps/diffexdb/shared/public/assets /home/deploy/apps/diffexdb/releases/20190507042412/public/assets
+  INFO [547670c8] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [ec3cec4f] Running if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [ec3cec4f] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi
+ DEBUG [5beedc4e] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [2cb12a21] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/diffexdb/shared/bundle --without development test --deployment --quiet on 142.93.204.216
+ DEBUG [2cb12a21] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/diffexdb/shared/bundle --without development test --deployment --quiet
+ DEBUG [09d5241e] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20190507042412/Gemfile'.
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	[0m
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	[0m
+ DEBUG [09d5241e] 	[33mWarning, new version of rvm available '1.29.7-next', you are using older version '1.29.4'.
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	You can disable this warning with:    echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	You can enable  auto-update  with:    echo rvm_autoupdate_flag=2 >> ~/.rvmrc[0m
+ DEBUG [09d5241e] 	
+ DEBUG [09d5241e] 	[0m
+  INFO [09d5241e] Finished in 1.135 seconds with exit status 0 (successful).
+ DEBUG [ea2a434f] Running if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [ea2a434f] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi
+ DEBUG [ff95fa5a] Finished in 0.040 seconds with exit status 0 (successful).
+  INFO [c0302d60] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile on 142.93.204.216
+ DEBUG [c0302d60] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [ff84d39f] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [ff84d39f] 	
+ DEBUG [ff84d39f] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20190507042412/Gemfile'.
+ DEBUG [ff84d39f] 	
+ DEBUG [ff84d39f] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [ff84d39f] 	
+ DEBUG [ff84d39f] 	[0m
+ DEBUG [ff84d39f] 	
+ DEBUG [ff84d39f] 	[0m
+  INFO [ff84d39f] Finished in 22.180 seconds with exit status 0 (successful).
+ DEBUG [4d5b5fd0] Running if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [4d5b5fd0] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi
+ DEBUG [270ba52d] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [04125ffd] Running /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412/assets_manifest_backup on 142.93.204.216
+ DEBUG [04125ffd] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && /usr/bin/env mkdir -p /home/deploy/apps/diffexdb/releases/20190507042412/assets_manifest_backup
+  INFO [7234d728] Finished in 0.098 seconds with exit status 0 (successful).
+ DEBUG [d1935473] Running /usr/bin/env ls /home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest* on 142.93.204.216
+ DEBUG [d1935473] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && /usr/bin/env ls /home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest*
+ DEBUG [b66299dc] 	/home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest-1c91b4347ce013b97b8a0fcc06b0ebdb.json
+ DEBUG [b66299dc] 	
+ DEBUG [b66299dc] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [f988f194] Running /usr/bin/env ls /home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest* on 142.93.204.216
+ DEBUG [f988f194] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && /usr/bin/env ls /home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest*
+ DEBUG [7113d2a1] 	/home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest-1c91b4347ce013b97b8a0fcc06b0ebdb.json
+ DEBUG [7113d2a1] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [81ed2a3d] Running /usr/bin/env cp /home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest-1c91b4347ce013b97b8a0fcc06b0ebdb.json /home/deploy/apps/diffexdb/releases/20190507042412/assets_manifest_backup on 142.93.204.216
+ DEBUG [81ed2a3d] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && /usr/bin/env cp /home/deploy/apps/diffexdb/releases/20190507042412/public/assets/.sprockets-manifest-1c91b4347ce013b97b8a0fcc06b0ebdb.json /home/deploy/apps/diffexdb/releases/20190507042412/assets_manifest_backup
+  INFO [6b9a8c79] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [bc37357d] Running if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [bc37357d] Command: if test ! -d /home/deploy/apps/diffexdb/releases/20190507042412; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases/20190507042412'" 1>&2; false; fi
+ DEBUG [49e804aa] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [ffbd1af4] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate on 142.93.204.216
+ DEBUG [ffbd1af4] Command: cd /home/deploy/apps/diffexdb/releases/20190507042412 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [7e577f05] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/releases/20190507042412/Gemfile'.
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	[0m
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	[0m
+ DEBUG [7e577f05] 	The PGconn, PGresult, and PGError constants are deprecated, and will be
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	removed as of version 1.0.
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	
+ DEBUG [7e577f05] 	Called from /home/deploy/apps/diffexdb/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [7e577f05] 	
+  INFO [7e577f05] Finished in 3.542 seconds with exit status 0 (successful).
+  INFO [b399f7a2] Running /usr/bin/env ln -s /home/deploy/apps/diffexdb/releases/20190507042412 /home/deploy/apps/diffexdb/releases/current on 142.93.204.216
+ DEBUG [b399f7a2] Command: /usr/bin/env ln -s /home/deploy/apps/diffexdb/releases/20190507042412 /home/deploy/apps/diffexdb/releases/current
+  INFO [c26345eb] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [c73a9683] Running /usr/bin/env mv /home/deploy/apps/diffexdb/releases/current /home/deploy/apps/diffexdb on 142.93.204.216
+ DEBUG [c73a9683] Command: /usr/bin/env mv /home/deploy/apps/diffexdb/releases/current /home/deploy/apps/diffexdb
+  INFO [a9e119e1] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [ae41eda4] Running /usr/bin/env ls -x /home/deploy/apps/diffexdb/releases on 142.93.204.216
+ DEBUG [ae41eda4] Command: /usr/bin/env ls -x /home/deploy/apps/diffexdb/releases
+ DEBUG [467a3c51] 	20190401154754	20190401155652	20190418044927	20190424214031	20190506200509
+20190507042412
+ DEBUG [467a3c51] Finished in 0.145 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 142.93.204.216
+  INFO [eddfdc4a] Running /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20190401154754 on 142.93.204.216
+ DEBUG [eddfdc4a] Command: /usr/bin/env rm -rf /home/deploy/apps/diffexdb/releases/20190401154754
+  INFO [887e8510] Finished in 0.145 seconds with exit status 0 (successful).
+ DEBUG [555f835c] Running if test ! -d /home/deploy/apps/diffexdb/current; then echo "Directory does not exist '/home/deploy/apps/diffexdb/current'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [555f835c] Command: if test ! -d /home/deploy/apps/diffexdb/current; then echo "Directory does not exist '/home/deploy/apps/diffexdb/current'" 1>&2; false; fi
+ DEBUG [007f6261] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [26cf89ff] Running [ -f /home/deploy/apps/diffexdb/shared/tmp/pids/puma.pid ] on 142.93.204.216
+ DEBUG [26cf89ff] Command: [ -f /home/deploy/apps/diffexdb/shared/tmp/pids/puma.pid ]
+ DEBUG [cf3ab4c9] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [a246cb6c] Running /usr/bin/env kill -0 $( cat /home/deploy/apps/diffexdb/shared/tmp/pids/puma.pid ) on 142.93.204.216
+ DEBUG [a246cb6c] Command: cd /home/deploy/apps/diffexdb/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/deploy/apps/diffexdb/shared/tmp/pids/puma.pid ) )
+ DEBUG [d38ab7ce] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [5e625fe0] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/diffexdb/shared/tmp/pids/puma.state -F /home/deploy/apps/diffexdb/shared/puma.rb restart on 142.93.204.216
+ DEBUG [5e625fe0] Command: cd /home/deploy/apps/diffexdb/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/deploy/apps/diffexdb/shared/tmp/pids/puma.state -F /home/deploy/apps/diffexdb/shared/puma.rb restart )
+ DEBUG [3240a8d0] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+ DEBUG [3240a8d0] 	
+ DEBUG [3240a8d0] 	you can ignore these warnings with 'rvm rvmrc warning ignore /home/deploy/apps/diffexdb/current/Gemfile'.
+ DEBUG [3240a8d0] 	
+ DEBUG [3240a8d0] 	To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+ DEBUG [3240a8d0] 	
+ DEBUG [3240a8d0] 	[0m
+ DEBUG [3240a8d0] 	
+ DEBUG [3240a8d0] 	[0m
+ DEBUG [3240a8d0] 	Command restart sent success
+ DEBUG [3240a8d0] 	
+  INFO [3240a8d0] Finished in 0.897 seconds with exit status 0 (successful).
+ DEBUG [89339251] Running if test ! -d /home/deploy/apps/diffexdb/releases; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases'" 1>&2; false; fi on 142.93.204.216
+ DEBUG [89339251] Command: if test ! -d /home/deploy/apps/diffexdb/releases; then echo "Directory does not exist '/home/deploy/apps/diffexdb/releases'" 1>&2; false; fi
+ DEBUG [dbea82df] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [7e289c3d] Running /usr/bin/env echo "Branch master (at 2605f88bbe9e75a6704c419276681d1c444be3cd) deployed as release 20190507042412 by ahmed.mahmoud" >> /home/deploy/apps/diffexdb/revisions.log on 142.93.204.216
+ DEBUG [7e289c3d] Command: cd /home/deploy/apps/diffexdb/releases && /usr/bin/env echo "Branch master (at 2605f88bbe9e75a6704c419276681d1c444be3cd) deployed as release 20190507042412 by ahmed.mahmoud" >> /home/deploy/apps/diffexdb/revisions.log
+  INFO [5b0ad069] Finished in 0.097 seconds with exit status 0 (successful).

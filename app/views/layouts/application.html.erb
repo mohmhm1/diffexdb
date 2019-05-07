@@ -53,15 +53,23 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="https://drive.google.com/file/d/1C6vOUtB0WvehzD6M4ExRgYkrU0fTcUVv/view?usp=sharing" data-no-turbolink="false"">Source Code Download</a></li>
+
       <li><a href="/samples#index" data-no-turbolink="false">Sample Metadata and Query</a></li>
       <li><a href="/abundances?utf8=✓&q%5Bsample_id_eq%5D=&q%5Btarget_id_eq%5D=ENST00000362079.2&commit=Search"data-no-turbolink="true">Normalized Counts</a></li> 
        <li><a href="/sleuths?utf8=✓&q%5Bmodel_cont%5D=%3A"data-no-turbolink="true">Differential Expression Analysis</a></li>
        <li><a href="/splices?utf8=✓&q%5Bsample_id_eq%5D=TCGA-F4-6704&q%5Bensembl_eq%5D=ENSG00000000003&commit=Search">Event Level Splicing  analyses</a></li> 
        <li><a href="/transplices?utf8=✓&q%5Bsample_id_eq%5D=TCGA-F4-6704&q%5Bgene_eq%5D=ENSG00000133703&commit=Search"data-no-turbolink="true">Transcript Level Splicing Analyses</a></li>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+    Download
+  </button>
+  <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://drive.google.com/file/d/1C6vOUtB0WvehzD6M4ExRgYkrU0fTcUVv/view?usp=sharing">Source Code</a>
+            <a class="dropdown-item" href="https://drive.google.com/file/d/1akna0I8eKsvD_vOTqhVVO1UsGaMJ0UPP/view?usp=sharing">Documentation</a>
+          </div></li>
     </ul>
-    
-           
   </div>
 </nav>
 <%= yield %>
